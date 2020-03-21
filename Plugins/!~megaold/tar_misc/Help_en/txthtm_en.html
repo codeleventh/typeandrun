@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>Alias description ~Txt2htm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+ <center><a href="index_en.html">Back</a></center>
+ <h3>~Txt2Htm</h3>
+ <h4>Description:</h4>
+ The program is intended for conversion format of text tables. I used it for conversion of the text tables into
+ hypertext (HTML) tables. The problem has arisen because, Excel (carrying out the given conversion) makes it is
+ extremely ineffective, but effective code was necessary. Besides with the help of the given program it is possible
+ to solve even automatic reference set (see provisional datafiles). However it can also convert some other formats.
+ <h4>Operation with the program:</h4>
+ <center><img src="txthtm_en.gif"></center>
+ For conversion it is necessary to write conversion script. It is text string indicating how program should treat
+ the format of an input file. The format of script string: 
+ <br><i>id1id2id3...</i>
+ <br>That is continuous (without blanks and other separators) list of identifiers and separators. Each unit of
+ this list has the following format: 
+ <br><i>%modifier and identifier without separation%separator's list through comma</i>
+ <br><i>Modifier</i> - is a sequence of characters:
+ <ul>
+  <li><i>number</i> - width of a field. If is given, the program will read always from the file string(line) of
+  given length.
+  <li><i>*</i> - means, that the columns can be divided more by(with) than one separator. The superfluous separators
+  are ignored.
+  <li><i>!</i> - means, that the given field can not be empty.
+  <li><i>^</i> - means, that all characters of a field will be transformed to the upper case.
+  <li><i>_</i> - means, that all characters of a field will be transformed to lowercase. If there is a conflict with
+  the previous modifier - operates last.
+  <li><i>&amp;</i> - means, that the superfluous blanks in the beginning and end of a field will be remote.
+ </ul>
+ <i>Identifier</i> starts by the first character of the English alphabet. In a name of the identifier there can be
+ only latin characters and digits (the character '_' is not allowed!). Other characters are ignored. The register
+ of value has no meaning. The name of the identifier inside the template (see further), made in сиволы of % is
+ substituted on its value.
+ <br><i>Separators</i> - characters bounding a field. For example, in text таблицых, as a rule, delimiters are the
+ characters of a pseudo-graphics, or blanks. It is possible to set characters as their code (for example, <i>#9</i>
+ - tabulation code, <i>#13</i> - new line code), as continuous string (<i>'continuous string'</i>), or directly.
+ In direct record the special symbols (comma (,), backslash (\), quote ('), lattice (#)) should be shielded by
+ the character backslash (\). In continuous string it is not necessary to do so. It is necessary to select optimal
+ kind and use it all the time. If after any identifier is not present separators, but it has no fixed length, it
+ is considered, that its separators coincide with separators previous. As the majority of the tables is homogeneous,
+ this property strongly simplifies script recording.
+ <br><strong>Examples:</strong>
+ <i>%*&s1%#9,' '%12s2%%s3%\%,'\&'%*s4%#13#10</i>
+ <br>Following given script, the program will understand, that after the first field there can be any number
+ of separators like blanks and tab stops, and the superfluous blanks need to be deleted, the second field has
+ fixed width of 12 bytes (therefore there are no separators), the third field is ended either character of %,
+ or combination \&, at last, fourth field is ended by one or several characters of carry of string in the 
+ Windows format (for Unix the format will be another). For example, for a sequence 
+ <br><i>One[tab][space][tab]Two123456789Three\&Four[line carrier][line carrier]</i>
+ <br>The values of identifiers will be:
+ <br><i>S1=One;S2=Two123456789;S3=Three;S4=Four</i>
+ <br>For the table with four columns and any separators optimal script:
+ <br><i>%*&s1%[separator, or separators' list]%*&s2%%*&s3%</i> and so on...
+ <br>If there are identifiers identical names, subsequent are ignored.
+ <br>For operation it is necessary to create three templates: the template of header, base (data) and suffix
+ (completing). All three templates form in that format, in what there should be an output file. The sequence
+ <i>%identifier name%</i> will be replaced with value of the identifier. For example, for the previous example
+ <i>%s3%</i> will be replaced with <i>Three</i>. The template of header is handled only once - it placed in the
+ beginning of the file, the template of the suffix placed on the end, and the template of the data placed
+ sequentially for each record (or string) from the input file. A maximum size of a field - 2 kilobytes. Except
+ for user's identifiers, in the program there are six standard identifiers: 
+<ul>
+  <li><i>INNAME</i> - complete name of an input file
+  <li><i>OUTNAME</i> - name of the generating file 
+  <li><i>PREFIX</i>, <i>DATA</i>, <i>SUFFIX</i> - names of files of templates of header given, suffix
+  <li><i>AUTHOR</i> - my name
+ </ul>
+ <h4>Example of the template of header</h4>
+ &lt;HTML&gt;
+ <br>&lt;HEAD&gt;&lt;TITLE&gt;List %outname%&lt;/TITLE&gt;&lt;/HEAD&gt;
+ <br>&lt;BODY&gt;
+ <br>&lt;CENTER&gt;
+ <br>&lt;H1&gt;Description %inname%&lt;/H1&gt;
+ <br>&lt;H2&gt;This file %outname%&lt;/H2&gt;
+ <br>&lt;br&gt;
+ <br>&lt;TABLE BORDER=1&gt; 
+  <br>&lt;strong&gt;
+  <br>&lt;TR&gt;
+   <br>&lt;TH WIDTH="20%"&gt;File&lt;/TH&gt;
+   <br>&lt;TH WIDTH="70%"&gt;Description&lt;/TH&gt;
+   <br>&lt;TH WIDTH="10%"&gt;Open&lt;/TH&gt;
+  <br>&lt;/TR&gt;
+  <br>&lt;/strong&gt;
+ <h4>Example of the template of the data</h4> 
+  &lt;TR&gt;
+   <br>&lt;TH WIDTH="20%"&gt;&lt;font size="3" face="Arial"&gt;%S1%&lt;/font&gt;&lt;/TH&gt;
+   <br>&lt;TH WIDTH="70%"&gt;&lt;font size="2" face="Arial"&gt;%S2%&lt;/font&gt;&lt;/TH&gt;
+   <br>&lt;TH WIDTH="10%"&gt;&lt;font size="3" face="Arial"&gt;&lt;a href="%S1%"&gt;Open&lt;/a&gt;&lt;/font&gt;&lt;/TH&gt;
+  <br>&lt;/TR&gt;
+ <h4>Example of the template of the suffix</h4>
+ &lt;/TABLE&gt;
+ <br>&lt;br&gt;
+ <br>&lt;hr width="75%"&gt;
+ <br>&lt;br&gt;
+ <br>&lt;table border=1&gt;
+  <br>&lt;tr&gt;&lt;th width=400 colspan=2&gt;&lt;font size="-1"&gt;Done with:&lt;/font&gt;&lt;/th&gt;&lt;/tr&gt;
+  <br>&lt;tr&gt;&lt;th width=100&gt;&lt;font size="-2"&gt;Prefix:&lt;/font&gt;&lt;/th&gt;&lt;th width=300&gt;&lt;font size="-2"&gt;%prefix%&lt;/font&gt;&lt;/th&gt;&lt;/tr&gt;
+  <br>&lt;tr&gt;&lt;th width=100&gt;&lt;font size="-2"&gt;Data:&lt;/font&gt;&lt;/th&gt;&lt;th width=300&gt;&lt;font size="-2"&gt;%data%&lt;/font&gt;&lt;/th&gt;&lt;/tr&gt;
+  <br>&lt;tr&gt;&lt;th width=100&gt;&lt;font size="-2"&gt;Suffix:&lt;/font&gt;&lt;/th&gt;&lt;th width=300&gt;&lt;font size="-2"&gt;%suffix%&lt;/font&gt;&lt;/th&gt;&lt;/tr&gt;
+  <br>&lt;tr&gt;&lt;th width=400 colspan=2&gt;&lt;font size="-1"&gt;Author: %Author%&lt;/font&gt;&lt;/th&gt;&lt;/tr&gt;
+ <br>&lt;/table&gt;
+ <br>&lt;/CENTER&gt;
+ <br>&lt;body&gt;
+ <br>&lt;/html&gt;
+ <h4>Conversion script:</h4>
+ <i>%*s1%#9%*s2%</i>
+ <h4>Входной файл:</h4>
+ <table border="1" cellspacing="0" cellpadding="0">
+  <tr><td>First</td><td>Red</td></tr>
+  <tr><td>Second</td><td>Green</td></tr>
+  <tr><td>Third</td><td>Blue</td></tr>
+  <tr><td>Fourth</td><td>Brown</td></tr>
+ </table>
+ Open <a href="example_en.txt" target="_new">example.txt</a>
+ <h4>Result:</h4>
+ Open <a href="example_en.htm" target="_new">example.htm</a>
+ <h4>Features:</h4>
+ <ul>
+  <li>In the program there are four standart scripts: for the standard tables (separators of a tab stops) on
+  three and four columns, the optimizer for text files (automatically assigns in the end the necessary character
+  of the end of line, so the don't need to write it yourself, and script for binary files - to write how is
+  written in a manual. 
+ </ul>
+</body>
+</html>

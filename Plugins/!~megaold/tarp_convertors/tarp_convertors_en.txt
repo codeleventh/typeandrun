@@ -1,0 +1,51 @@
+Name: Various functions for converting values
+
+Version: 1.0
+Author: Yuri Chebotarev
+
+Options:
+1. RGB conversion (rrr,ggg,bbb)<->#rrggbb
+
+Example: input RGB(255,204,153)
+Returned result #FFCC99
+
+Input #FFfa99
+Returned result RGB(255,250,153)
+
+2. Converting decimal values to HEX and vice versa.
+
+DEC to HEX example:
+Input DEC(111)
+and get the result
+273
+
+Note - you also can input values this way: DEC(0x111)
+
+HEX to DEC example:
+Input HEX(1234567689)
+and get the result
+49960209
+
+3. Some auxilary functions
+"tm" returns the current time (HH:MM:SS)
+"date" returns the current date (DD.MM.YYYY)
+
+Note - all functions are NOT case-sensitive.
+You may type "dec(..." or "DEC(...." - the result will be the same.
+This also is applied to RGB(rrr,ggg,bbb)<->#rrggbb conversion, 
+i.e. #FF00AA è #ff00Aa are the same. 
+
+
+
+
+======================================================
+
+----------------------------------¬
+translated from Russian to English
+by Paul Kiss, pk280181@yandex.ru
+
+
+
+
+
+

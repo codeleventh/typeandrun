@@ -1,0 +1,73 @@
+Name: Timer with estimated time indication.
+Version: 1.1
+Author: Python <smisoft@rambler.ru> (c) SmiSoft (SA) 
+
+Description:
+The bunch of timer-programs, which bother you after certain period of time, or perform a task. For instance - remind you about the time while you're playing your favourite game.
+
+Options:
+Shows a text message after specified time or starts a program with parameters.
+Can show estimated time on either analog clock, or digital clock (hh:mm:ss).
+Allows to change the timer's time, or stop the timer before it triggers.
+
+Aliases:
+~SetTimer hh:mm:ss: [number] [/a,/d] /msg,/run] string
+	Sets or modifies the existing timer.
+	The first paremeter - time when the timer triggers.
+	You can specify it in hh:mm:ss format (for instance: 3:0:7 - timer triggers in 3 hours 7 minutes)
+	...or mm:ss (7: - timer triggers in 7 minutes)
+	...or ssss (600 - timer triggers in 600 seconds (10 minutes))
+	As seen from examples, you can omit zeros, and even zero values of parameters (for instance, the first example can be written as 3::7, though it looks unusual).
+	You cant set the timer for 0 seconds or omit the time at all - the timer will not be set, and you'll receive the message.
+	The optional parameter - timer's number: you can change the behaviour of an already set timer (if its number is known) or set the timer with the known number. If the parameter is omited, the first free timer is used.
+	/a means that once the timer is set you'll see the analog clock in the right top corner of the screen, indicating the estimated time. You can move them around screen with the mouse.
+	/d means that the in the same tight top corner you'll see the digital clock showing the time in hh:mm:ss format (or mm:ss, if hh equals 0). You can move it with the mouse as well.
+	If you omit this parameter, the timer will be successfully set, but no window will be created.
+	/msg - means that the last parameter (the string) is the message which will be shown after the time elapses. The message will be shown in the middle of the screen in "always-on-top" dialog window, and will be bothering you untill you push OK. It may not make you stop playing, but the timer's conscience will be clean :->.
+	/run - means that the last parameter (the string) is a program's name, which is to be run with the command line. The latter is separated by the first space.
+	If neither /msg nor /run is specified, /msg is chosen by default.
+	Examples:
+	~SetTimer 600 /a /msg Switch off the kettle, if you want to boil the water for 10 minutes. Or this one:
+	~SetTimer 3:: /run C:\Programs\TerminateHalfLife.exe, if you want the timer to divert you from the game and to make it work invisibly.
+
+~KillTimer [number]
+	Kills the existing timer with the corresponding number, or all timers (both visible and hidden), if the number isnt specified.
+
+~GetTimer [number]
+	Shows the information about the timer with the corresponding number, or - about all timers you have.
+
+Features:
+	You can move the clock to any place. The clock will move jerkily. It's not the fault of your PC, it's the flaw in the drawing algorithm. I hope in further versions it'll be fixed.
+	If the system is too much overloaded timers' windows may not refresh. That's not a bug, it's a feauture - I set the lowest priority to the timer in order to spare system resourses. After the time elapses, the timer will trigger.
+	If you reboot the system all information about your timers will be lost. And what did you expect?
+	For some reason the message window isnt active. I searched for the solution through the roundtable at DelphiKingdom.com but didnt find any. Maybe it's the problem of Windows.
+	The incoming text is written on Delphi 3.0!
+	Compiled plugin is compressed by UPX. That's just for information.
+
+History:
+[+] New feature
+[*] Bug fixed
+[-] Removed feature
+
+Version 1.0 - 03 feb 05
+[+] first version of the plugin
+
+Version 1.1 - 05 feb 05
+[+] possibility to change a timer's time via the command line
+[+] some new aliases appeared (see description)
+[+] new keys (/msg and /run)
+[-] timer's context menu removed
+[*] problem with moving timer's window solved
+[*] command line analysis algorithm remade.
+[*] source code rewritten under Delphi 3.0 and doesnt use runtime libraries anymore
+
+Version 1.1 final - 06 feb 05
+[*] small interface flaw - the gray line right from the analog timer - fixed.
+[*] digital timer window header removed
+[*] bug appearing while exiting TypeAndRun having an active timer under Win2000 fixed
+
+==========================================================
+---------------------------------¬
+translated from Rus to Eng
+by Paul Kiss <pk280181@yandex.ru>
+

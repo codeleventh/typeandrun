@@ -1,0 +1,142 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>tar_hotkey plugin description</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+ <center>
+ <h1>Hotkey manager</h1>
+ </center>
+ <h2>Version: 1.0 final</h2>
+ <h2>Author: Python &lt;smisoft@rambler.ru&gt; (c) SmiSoft (SA)</h2>
+ <h3>What is this:</h3>
+ <p>Some commands are call so frequent (for example, rewinding in Winamp), that even TypeandRun console is not the most convinient way to execute them.
+ <p>This plugin allows you to create up to 200 keyboard shortcuts (up to 5 keys, pressed together at one time), most known as "hotkeys" from any keys on your keyboard, even multimedia buttons!
+ <p>Now, I found some time to write final version!
+ <h3>Aliases</h3>
+ <ul>
+  <li>~SetHotkey
+   <ul>
+    <li><b>Syntax:</b>
+     <br><i>~SetHotkey ID Hotkey_list [/run,/tar] command</i>
+    <li><b>Desciption</b> 
+     <br>Installs new, or modifies existing hotkey
+    <li><b>Parameters</b>
+     <ul>
+      <li><i>ID</i> - any string, that has no spaces in it (if you want, you can  replace space with _ sign). It uses as a name in hotkey list in hotkey Editor (see later).
+      <li><i>Hotkey_list</i> - list of scan-codes or predefined names of keys. Scan code has the folowing format: $xx, where xx - hexadecimal number. There are some predefined names, that can be used instead of scan-codes:
+      <ul>
+       <li><i>LCtrl,RCtrl</i> - left and right Control
+       <li><i>LShift,RShift</i> - left and right Shift
+       <li><i>LAlt,RAlt</i> - left and right Alt
+       <li><i>LWin,RWin</i> - left and right Win
+       <li><i>Ctrl,Shift,Win,Alt</i> - any side Control, Shift, Alt, Win
+       <li><i>Menu</i> - menu-key on Microsoft Natural keyboard (between right Win and Ctrl on my keyboard)
+       <li><i>Esc</i> - Esc button
+       <li><i>F1..F12</i> - function keys F1..F12
+       <li><i>~,1..9,0,-,=,\</i> - numerical buttons on regular keyboard (on the left)
+       <li><i>any english letters, [, ], ;, ', /, comma, point</i>
+       <li><i>Ins,Home,PgUp,Del,End,PgDn</i> - accordingly, buttons Insert, Home,Page up, Delete, End, Page Down on the regular keyboard
+       <li><i>UArrow, LArrow,DArrow, RArrow</i> - arrows on the regular keyboard (Arrow up, left, down and right)
+       <li><i>Gr1..Gr9,Gr0,Gr.,Gr+,Gr-,Gr*,Gr/</i> - corresponding buttons on "numerical" keyboard (also, called "gray", so buttons have prefix "Gr")
+       <li><i>Vol+,Vol-,VolMute,Prev,Pause,Stop,Next,Media,Calc,MyComp</i> - corresponding multimedia buttons on my Dialog keyboard. I think, if your keyboard has so buttons, this constants will work too. If not, use Editor.
+       <li>Halt,Refresh,Search,Favourites,Back,Forward,Home,EMail</i> - other multimedia buttons on my Dialog keyboard. If you are not sure, use Editor.
+      </ul>
+      Keys: Enter, серый Enter, CapsLock, NumLock, ScrollLock, PrintScreen, Pause are not supported by constants, but you can define it in Editor. I didn't make constants, because i think, that it is a good idea not to use that keys in hotkeys because of they specisl functions.
+      <li><i>/run</i> or <i>/tar</i> - execute command (may be, with parameters), or TaR alias through standart gate.
+      <li><i>command</i> - program name with parameters or any string (it'll be executed, as if it typed in TaR console)
+     </ul>
+    <li><b>Examples:</b>
+     <ul>
+      <li><i>~sethotkey Word Back /tar Word</i>
+       <br>Execute Word by pressing "Backward" key (this is a multimedia key)
+      <li><i>~sethotkey Winamp Shift Control $1 /run C:\Programs\Winamp\Winamp.exe</i>
+       <br>Execute Winamp by pressing Control-Shift-Esc (if your Winamp located in other directory, command will differ)
+     </ul>
+    <li><b>Special features:</b>
+     <br>If you define more than one key, they must be pressed simultaneously. For example, you can create a "secret" command, that will be executed on pressing all four arrows!
+     <br>(Warning! Arrows on "gray" keyboard differ from regular arrows)
+   </ul>
+  <li>~KillHotKey
+   <ul>
+    <li><b>Syntax:</b>
+     <br><i>~KillHotKey [ID]</i>
+    <li><b>Description:</b>
+     <br>Delete hotkey with given ID, or explains, that there are no keys with that name
+    <li><b>Parameters:</b>
+     <ul>
+      <li><i>ID</i> - identificate hotkey, that will be erased. If no ID defined, erase all hotkeys (Use with caution!)
+     </ul>
+   </ul>
+  <li>~GetHotKey
+   <ul>
+    <li><b>Syntax:</b>
+     <br><i>~GetHotKey [ID]</i>
+    <li><b>Description</b>
+     <br>Show information about hotkey with given ID.
+    <li><b>Parameters</b>
+     <li><i>ID</i> - indicate hotkey, that you want to see. If no ID defined, call hotkey Editor.
+      <br>In editor you'll see:
+      <ul>
+       <li>Hotkey list
+       <li>ID field (it can contain any string without spaces)
+       <li>Four checkboxes (Ctrl and so on) - flags, that appropriate key must be down
+       <li>Four fields of scan-codes. To enter scan-code, put cursor into field (with a mouse, or using Tab key) and then press any key. To delete scan-code, press that key again.
+       <li>Task type and task string fields. You can choose from running program, or executing an alias. Depend on this, in task string you must plase program name (with parameters) or alias name (with parameters).
+       <li>Button "Add hotkey" appends new hotkey to the list
+       <li>"Delete hotkey" - erase selected item. Everything works like on page "Config editor" in TaR (as I think)
+      </ul>
+      Any operation with the plugin may be done only with Editor. All other aliases duplicate Editor features...
+   </ul>
+  </ul> 
+ <center><img src="get_en.gif"></center>
+ <h3>Installation:</h3>
+  <p>In archive, you can find files:
+  <ul>
+   <li>tar_hotkey.dll - main plugin module
+   <li>KHook.dll - keyboard hook procedure
+   <li>tar_hotkey.ini - example language file
+   <li>tar_hotkey_???.txt - help file (that you read now)
+  </ul>
+  <p>To install, put KHook.dll into TaR directory (where typeandrun.exe located), or into C:\Windows\System (if Windows located in other folder, correct me). This is because Windows seek for DLLs only in specific folders... If you have no KHook.dll, you will see an error message.
+  <p>Place other files together. In tar_hotkey.ini you can find [Language] section. You can translate the program by editing that lines. If you have no that file, or have no that section, the russian interface will be used.
+ <h3>Features:</h3>
+  <ol>
+   <li>Not all key combination may work. On my keyboard, combination "Arrow left", "Arrow up", "Arrow right" don't work together with "H" key - this is keyboard controller feature. Also, don't define Ctrl-Alt-Del combination.
+   <li>If plugin doesn't load correctly, it will show message, but TaR will think, that everything is OK.
+   <li>If you define too many hotkeys, your system may slow-down (global hook used...)
+   <li>If some other program try to catch the same hotkeys, only my plugin's hotkey will bee executed, except for Windows-specific combinations like Win-M. That also means that you SHOULD NOT use other hotkeys manager.
+   <li>Some keyboard drivers use spesific key like Power,Sleep,WakeUp processing, executing appropriate command right after pressing the key. Therefore, on some computes that keys cann't be used in hotkeys.
+   <li>You can not define Tab as a part of hotkey. May be, you don't need it?
+   <li>When Editor active, hotkeys won't work. That's not a bug but feature.
+   <li>Power, Sleep, Wake up buttons can't be used in hotkeys, because on my keyboard they perform appropriate action and plugin can't capture them. I ddon't know, how to prevent this. Maybe, driver problem, but I'm not sure.
+   <li>If you receive a note, that hook error occur (not installed, or not removed), please, restart your Windows - I cant't guarantee stable work not only plugin, but whole system at all!
+   <li>The example .ini file is the translation of plugin interface to Russian and the example of some hotkeys definition. Some hotkeys must work together with my tar_media plugin.
+   <li>Sometimes, key strokes cann't reach my hook procedure. This usually happens when your system communicates with external devices like TV-tuner, external modem or printer. When your think, that hotkeys executes incorrectly, press Ctrl-Alt-Shift-F12 key combination. This will reset plugin status. This hotkey cann't be redefined.
+  </ol> 
+ <b><font size=+1 color=blue>History:</font></b>
+ <br><font color=green>[+]</font>&nbsp;New feature
+ <br><font color=blue>[*]</font>&nbsp;Fixed bug
+ <br><font color=red>[-]</font>&nbsp;Removed feature
+
+ <p><b><font size=+1 color=blue>Version 1.0 alpha - 21.05.05</font></b>
+ <br><font color=green>[+]</font>&nbsp;Unstable, not all function supported
+
+ <p><b><font size=+1 color=blue>Version 1.0 beta - 23.05.05</font></b>
+ <br><font color=green>[+]</font>&nbsp;Now, you can run programs with space in names, for example: "C:\Program files\Proga\Proga.exe"
+ <br><font color=green>[+]</font>&nbsp;TaR-like interface
+ <br><font color=green>[+]</font>&nbsp;English interface (look "Installation" section)
+ <br><font color=blue>[*]</font>&nbsp;Fixed bug, when program without command line can't execute
+ <br><font color=blue>[*]</font>&nbsp;Better hook algotithm (Now, works in all Windows, both 9x, and NT/2000/XP)
+ <br><font color=blue>[*]</font>&nbsp;Recompiled without vcl (and compressed with UPX)
+
+ <p><b><font size=+1 color=blue>Version 1.0 final - 16.06.05</font></b>
+ <br><font color=green>[+]</font>&nbsp;Many new constants defined
+ <br><font color=green>[+]</font>&nbsp;New help in HTML format
+ <br><font color=green>[+]</font>&nbsp;New editor's hotkey: Ctrl-Up moves selected item upwards one element, Ctrl-Down - down, Ctrl-PageUp - to the beginning of the list, Ctrl-PageDown - to the end of the list.
+ <br><font color=blue>[*]</font>&nbsp;No, combinations Win-... processed correctly and no char appear in edit lines.
+ <br><font color=blue>[*]</font>&nbsp;New, faster hook method. But sometimes it fail, for more information, look item 11 chapter Features
+
+</body>
+</html>

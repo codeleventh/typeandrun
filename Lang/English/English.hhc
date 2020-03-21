@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<BODY>
+<OBJECT type="text/site properties">
+	<param name="FrameName" value="content">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="About the program">
+	<param name="Local" value="aboutprogram.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Licence agreement">
+	<param name="Local" value="shareware.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="System requirements">
+	<param name="Local" value="systemperfomance.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Distributed package">
+	<param name="Local" value="distrcontext.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Program settings">
+	<param name="Local" value="working.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="How to create aliases">
+	<param name="Local" value="createaliases.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="How to use the console">
+	<param name="Local" value="runaliases.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Some useful examples">
+	<param name="Local" value="samples.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Hot Keys">
+	<param name="Local" value="hotkeys.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Command line parameters">
+	<param name="Local" value="commandlineparams.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="FAQ">
+	<param name="Local" value="faq.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="History of the program">
+	<param name="Local" value="historycreated.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Acknowledgments">
+	<param name="Local" value="senks.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Contact details">
+	<param name="Local" value="backaddress.htm">
+</OBJECT>
+</UL>
+</BODY></HTML>

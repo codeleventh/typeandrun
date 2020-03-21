@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>About tar_timer</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+ <center>
+ <h1>The scheduler and timer with possibility of indication of the stayed time</h1>
+ <h2>Version: 1.3</h2>
+ </center>
+ <h2>Author: Python &lt;smisoft@rambler.ru&gt; (c) SmiSoft (SA)</h2>
+ <h3>What is this:</h3>
+ <p>There are a few program, that after a given period elapsed, execute given operation
+ like executing a program, or showing popup message. This is very useful, when you play
+ an intresting game and don't want to play for a long time.
+ <p>The example program of that series you can find in Windows (it named Sheduler
+ in Windows, it's icon you can see in system tray (near clocks)
+ in Windows 98, or it is running as a service in Windows NT/2000/XP. Also, in Unix
+ the same program called Cron. There are a Windows program nnCron, clone of original
+ Unix's Cron. It is freeware for russian users and shareware for all other.
+ That program was the base for my plugin. You can easy find nnCron in Internet.
+ <h3>What it can:</h3>
+ <p>Show any given text message, or On Screen Display message (OSD) or runs given
+ program (with parameters) or call any TaR's command through standart interface
+ in given time, or after given period of time elapsed or periodically, with given
+ period. Period can vary from 1 second up to 68 years! You can create up to 100
+ timers and shedulers. They will work simultaneosely with low processor loading
+ (less than 1 persent on 800 MHz machine). Time period in timer given in specific
+ format (like 2:30:45) and for sheduler you should learn simple, but effective Cron
+ format.
+ <p>Also, it can show stayed time on analog clocks (round). You can see only one
+ timer's status at a time, to see other timer you should kill previous, or modify
+ it to invisible.
+ <p>Four task types: <i>/msg</i> - popup modal message, <i>/osd</i> - On Screen
+ Display message, <i>/run</i> - program execute, <i>/tar</i> - TaR's command execute.
+ <h3>How to use:</h3>
+ <h4>Main Cron's concepts (IMPORTANT!)</h4>
+ <p>At the alias description you'll see word Cron. What is this?
+ <p>As I Have told, Cron format was originally created for the same name program
+ Cron in Unix. Program appeared to be very successful and a numerous clones soon
+ appeared. My plugin is clone of that program too (but all code was written by me,
+ no third-party blocks of code was used.
+ <p>Cron's time is a text line, consists of 6 blocks:
+ <p><i>minutes hours days months day_of_week years</i>
+ <p>Each block represents set of possible values, or ranges, for example:
+ "<i>0,1,5-10</i>", or special char <i>*</i>, which means "all possible values".
+ Finite blocks, contains only <i>*</i> is possible to omit. For example, "<i>10 12</i>"
+ means 12 hours 10 minutes at all days.
+ <p>You can set day of weeks in Cron. They represented by ordinal number so Sunday
+ has number 0, and days from Monday to Saturday - numbers from 1 to 6 correspondingly.
+ <p>Date satisfies Cron's format (and then appropriate job executes) only when all
+ data fields satisfies corresponding Cron's field. For example, Cron line
+ "<i>0 20 * * 0,6</i>" forces plugin to execute given task at 8:00 вечером on
+ holidays (Saturday and Sunday).
+ <h4>Main job's concepts (IMPORTANT!)</h4>
+ <p>During alias's description, term job will be used. What is this?
+ <p>Plugin currently supports four types of jobs:
+ <ul>
+ <li><i>/msg line</i>
+ <br>Shows modal window with given message. Special chars can be used:
+ <br><i>\n</i> - line carry
+ <br><i>\t</i> - tab stop
+ <br><i>\\</i> - character \
+ <li><i>/run program_name_with_path parameters</i>
+ <br>or
+ <br><i>/run "program name with spaces" parameters</i>
+ <br>Executes programwith given parameters in current (TaR's) folder.
+ <li><i>/osd line</i>
+ <br>Shows message in the middle of the screen on a contrast background for one
+ second. Function doesn't use third-party libraries, but word no so good, as I want,
+ but in regular mode (not in full screen games) it works quite good.
+ <li>/<i>tar line</i>
+ <br>Transfer given command to Tar through standart interface.
+ </ul>
+ If no key defined, or no time defined, an error message will be diaplayed and
+ shedule or timer will not be installed.
+ <h3>Aliases:</h3>
+ <ul>
+  <li><i>~SetTimer HH:MM:SS [id] [/a] [/loop] [/late] [/start] task</i>
+  <br>Install new or modify existing timer.
+  <ul>
+   <li><i>HH:MM:SS</i> - time period, after which timer will execute task.
+   <br>You can set time as <i>HH:MM:SS</i> (for example <i>3:0:7</i> - will work
+    in 3 hours 7 seconds) or <i>MM:SS</i> (for example, <i>7:</i> - will work
+    equally in 7 minutes) or <i>SSSS</i> (for example, <i>600</i> - will work
+    in 600 seconds (10 minutes))
+   <br>As you see, you can omit leading zeroes, or even zeroed parameters
+   (for example, <i>3::7</i>, but it is unusual).
+   <br>You can't set timer for 0 seconds, you will be reported an error.
+   <li><i>id</i> - if you know timer's id, you can modify or delete it.
+   If you omit this parameter, you will set timer with 0 id. You can't get
+   information about timer with id 0 (only in full information) and you can
+   only kill last installed timer with id 0. Also, you can't modify timers with
+   id 0.
+   <li><i>/a</i> means, that you'll see analog clock in rigth upper corner of
+   the screen, that shows you stayed time. That is not a window, but a picture,
+   therefore you can't move it but you can press buttons under it.
+   <li><i>/loop</i> - create cyclic timer (executes every period with given time
+   period). You may use it, for example, to create time, that shows you information
+   about a break in work (for your eyes safety).
+   <li><i>/Late</i> - performs timer's action, as it possible. So, you can switch
+   off the computer, but timer will activate (if it must be activated during
+   computer was off) as sson as plugin will be loaded.
+   <li><i>/Start</i> - useful only if keys <i>/Loop</i> и <i>/Late</i> defined.
+   If timer has not worked on due time, it will work at once on plugin's start
+   (rule <i>/Late</i>), and next run (rule <i>/Loop</i>) will take place or in
+   accuracy in the indicated time (if <i>/Start</i> indicated), or at a time, like
+   all timers have been executed.
+   <br>For example, at 13:00 you have set timer at 1 hour (cyclic). Timer ararms
+   at 14:00, then computer was switch off and switch on only at 17:30. If key
+   <i>/Late</i> was indicated, then timer will alarm at once. If key <i>/Start</i>
+   was indicated then next alarm will be at 18:30, if no - then at 18:00 (like
+   timer at 15:00, 16:00 and 17:00 alarmed). You should use or not use this key
+   depend on your task.
+  </ul>
+  Examples of use:
+  <ul>
+   <li>~SetTimer 600 /a /msg Turn off teapot
+    <br>if you want to boil your teapot for 10 minutes with indicator. Or so:
+   <li>~SetTimer 3:: /run C:\Programs\TerminateHalfLife.exe
+    <br>if you want to shutdown an intresting game after 3 hours of playing.
+  </ul>
+  Feature: keys /a can be indicated for several timer simultaneosly, but you
+  will se only first of them (which was installet first). If you'll kill it with
+  ~killtimer, or it will elapse itself, or it will hide by ~settimer without /a,
+  when next timer will be visible.
+  <li><i>~KillTimer [id]</i>
+   <br>Destroy timer with given id or all timers, if id omitted.
+  <li><i>~GetTimer [id]</i>
+   <br>Displays information about timer with given id or about all timers if id omitted.
+   <center><img src="timer_en.gif"></center>
+   <ol>
+    <li>timer identifier
+    <li>executing command (message, program or alias, depending ot task type)
+    <li>remaining time
+   </ol>
+  <li><i>~SetShed id Cron [/Late] task</i>
+   <br>Installs shedule.
+   <ul>
+    <li><i>Id</i> - any non-blank string, contains any printable character except
+    for spaces.
+    <li><i>Cron</i> - alarm time in Cron (look that section) format.
+    <li><i>/Late</i> - means, that this task will be executed even if it is late.
+    This feature may not work on 29 february.
+    <li><i>Task</i> - any correctly given task (look that section).
+   </ul>
+  <li><i>~KillShed [id]</i>
+   <br>Destroy shedule with given id or all shedules id id omitted.
+  <li><i>~GetShed [id]</i>
+   <br>Display shedule with given id information or calls editor if id omitted.
+   You can use popup menus in editor - look.
+   <center><img src="shed_en.gif"></center>
+   <ol>
+    <li>Shedule list. Click to edit.
+    <li>Task name (id). If you'll enter space in name, you can't delete that shedule
+    with ~KillShed, only from editor.
+    <li>String in format <i>Cron [flags] task</i>. You can edit it, or visual fields (later).
+    <li>Convert visual appearance into Cron. Update field 3 with new data.
+    <li>Convert Cron into vissual appearance. Update visual fields. When items
+    in list 1 switches, visual fields and Cron correspond each other.
+    <li>Visual fields for data editing. Check that condition, when you task should
+    be performed.
+    <li>Specify /Late flag.
+    <li>Left button (+) add new record into list. For data will be used last edited
+    (visual or Cron) performation. Right button (-) deletes selected record.
+    <li>Type of performed task
+    <li>Task parameter (depends on task type) - message, program name of alias.
+    <li>Save changes and exit. Also, you can simply press Enter on text fields.
+    <li>Exit without saving. Also, you can exit with Esc.
+   </ol>
+  <li><i>~SetLoad [number] [/1] [/timeout time] task</i>
+   <br>Set task, performed at system's loading (like Autoexec, but more powerful).
+   <br><b>Parameters:</b>
+   <ul>
+    <li><i>number</i> - use only if you want to edit existing task with given number (from 1 to 25).
+    <li><i>/1</i> - means, that task will be perfomed once (then deleted). For
+    example, if you want to remember yourself to format hard-drive at next loading :).
+    <li><i>/timeout time</i> - tasks can be performed not one after one, but after
+    given period of time elapsed. In Autoexec all shortcuts runs simultaneosely,
+    this parameter helps to avoid that chaos.
+    <li><i>task</i> - any correct task (look above...).
+   </ul>
+  <li><i>~KillLoad [number]</i>
+   <br>Kills task with given number (and renumbers remaining). if no number specified,
+    then deletes all tasks (no warning will appear!)
+  <li><i>~GetLoad</i>
+   <br>Shows all tasks for autoload.
+  <li><i>~SetUnLoad [number] [/1] [/timeout time] task</i>
+   <br>Same as ~SetLoad, but performs at system's shutdown.
+  <li><i>~KillUnload [number]</i>
+   <br>Same as ~KillLoad, but for tasks, performaed at system's shutdown.
+  <li><i>~GetUnload</i>
+   <br>Shows all tasks, performing on system's shutdown.
+  <li><i>~ForgetCD [parameter]</i>
+   <br>Forget-CD-not. Pull out CD from drive, if you'll try to shutdown system with
+   disk inside. Parameters:
+   <ul>
+    <li>no parameters - show status
+    <li>0 - disable
+    <li>1 - enable
+   </ul> 
+ </ul>
+ <h3>Features:</h3>
+ <ul>
+  <li>When system overloaded, timer windows may not update. That is not bug,
+  simply plugin has very low priority. Timer will ararm as soon as possible.
+  <li>Shedulers and active timers stored in file plugin_name.ini.
+ </ul>
+ <b><font size=+1 color=blue>History:</font></b>
+ <br><font color=green>[+]</font>&nbsp;New feature
+ <br><font color=blue>[*]</font>&nbsp;Fixed bug
+ <br><font color=red>[-]</font>&nbsp;Removed feature
+ 
+ <p><font size=+1 color=blue>Version 1.0 - 03.02.05</font>
+ <br><font color=green>[+]</font>&nbsp;First plugin version
+
+ <p><font size=+1 color=blue>Версия 1.1 - 05.02.05</font>
+ <br><font color=green>[+]</font>&nbsp;Now, you can reinstall alarm time through command line
+ <br><font color=green>[+]</font>&nbsp;Some new aliases.
+ <br><font color=green>[+]</font>&nbsp;New keys (/msg and /run)
+ <br><font color=red>[-]</font>&nbsp;Removed contex menu in timer window
+ <br><font color=blue>[*]</font>&nbsp;Now, you can move clocks' window
+ <br><font color=blue>[*]</font>&nbsp;New command line interpreter
+ <br><font color=blue>[*]</font>&nbsp;Rewritten in Delphi 3.0
+
+ <p><font size=+1 color=blue>Version 1.1 final - 06.02.05</font>
+ <br><font color=blue>[*]</font>&nbsp;Removed gray strip right to the analog timers' window
+ <br><font color=blue>[*]</font>&nbsp;Removed header on digital timer' window
+ <br><font color=blue>[*]</font>&nbsp;Removed error on plugin unload in Windows 2000
+
+ <p><font size=+1 color=blue>Version 1.2 - 04.05.05</font>
+ <br><font color=green>[+]</font>&nbsp;Now, you can create shedule (run programs, for example, at 12:30). This is the most important change.
+ <br><font color=green>[+]</font>&nbsp;New key /osd (as for ~settimer, as for ~setshed) - display given text on screen for 1 second. My own algorrithm.
+ <br><font color=green>[+]</font>&nbsp;New key /tar (as for ~settimer, as for ~setshed) - executte any command from TaR's console
+ <br><font color=red>[-]</font>&nbsp;Now, you can't halt timer through context menu. Also, you can't move it's window.
+ <br><font color=red>[-]</font>&nbsp;Key /d removed
+ <br><font color=blue>[*]</font>&nbsp;Now, maximal command line length 65520 symbols instead of 255
+ <br><font color=blue>[*]</font>&nbsp;New id function in ~gettimer and ~killtimer
+ <br><font color=blue>[*]</font>&nbsp;~settimer with given id modify given timer.
+ <br><font color=blue>[*]</font>&nbsp;Rewritten in Delphi 6.0
+
+ <p><font size=+1 color=blue>Версия 1.3 - 29.06.05</font>
+ <br><font color=green>[+]</font>&nbsp;Now, timers will save.
+ <br><font color=green>[+]</font>&nbsp;More convinient Editor's interface. Windows XP supported.
+ <br><font color=green>[+]</font>&nbsp;All messages can be translated from INI file.
+ <br><font color=green>[+]</font>&nbsp;All errors reported.
+ <br><font color=red>[-]</font>&nbsp;Removed ~StoreShed. Now, when Editor closes, evrything saved. But on incorrect system termination strange alarms of timers and shedule may appear.
+ <br><font color=blue>[*]</font>&nbsp;Late processing. See key /late and flag in Editor window.
+ <br><font color=blue>[*]</font>&nbsp;New keys /late, /start, /loop
+ <br><font color=blue>[*]</font>&nbsp;No runtime libraries now.
+ 
+ <p><font size=+1 color=blue>Version 1.4 - 03.07.05</font>
+ <br><font color=green>[+]</font>&nbsp;Now, task can be performed on loading, or shutting down.
+ <br><font color=green>[+]</font>&nbsp;Forget-CD-not: now, you will never forget your disk in drive
+ <br><font color=green>[+]</font>&nbsp;Now OSD can work in full-screen games!
+</body>
+</html>

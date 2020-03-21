@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+ <html>  
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Windows-1250">
+<title>tar_misc description</title> 
+</head> 
+<body>
+<center>  
+<h1>Miscellaneous operations</h1> 
+<h2>Version: 1.0</h2> 
+</center>
+<h2>Author: Python &lt;smisoft@rambler.ru&gt; (c) SmiSoft (SA)</h2> 
+<h3>What is this:</h3> 
+<br>Later, this set of commands was included into plugin tar_media, but I think, that
+ it's not good and accepted solution to divide that functionality into different plugins.
+ So, <i>tar_amp</i> and <i>tar_misc</i> has appeared.
+<br>All detailed information you can find in alias description.
+<h3>Aliases:</h3> 
+These commands do not take command line parameters and call modal window during
+execution. Don't even try to unload plugin, when one of windows opened, this will
+perform fatal error. 
+<ul>
+ <li> ~exe2swf
+  <br>Cuts the executed unit for autoplay Flash files.
+  <br>If you have large collection of different flash films, and all of them have
+  the extension exe, you keep a huge portion of completely unnecessary data. It is
+  flash's players, linked to each file. If you'll cut off these units, you will
+  save about 800 kilobytes from each file. You can extract even player from file,
+  using the switch.
+  <br>The last used strings are stored in INI file.
+  <br><center><img width=293 height=150 src="exe2swf_en.gif"></center>
+  <ol>
+   <li>Input file. On the right - button to select file, the direct editing of a
+   field is forbidden. The file should necessarily be executed (extension .EXE),
+   differently algorithm can work incorrectly. 
+   <li>Output file. On the right - button to select file, the direct editing of
+   a field is forbidden. The file must not exist. Its extension should be .swf,
+   that Flash player could it correctly playback. 
+   <li>Operation's mode. Depending on switch's position, name of an output file
+   is automatically generated at choice entry. At change of a switch, name
+   automatically varies - watch it! 
+   <li> Start of conversion. During execution the diagnostic messages may appear.
+   The format of an input file detected fully automatically, that can result in
+   misunderstanding. In any case, the output file is generated, even if its format
+   is incorrect. I recommend to view all output files. If the file can not be
+   transformed, you can send me the reference to its source in the Internet, but
+   <u>not the file</u>, I don't need trash in my mailbox. Conversion also can start
+   on Enter in input fields. 
+   <li>Exit from the program with saving all data. Also you can exit on Esc. 
+  </ol>
+ <li>~renumber
+  <br>Change of the mode of indexing of files
+  <br>The command is intended for change of number of significant digits in the
+  file names, ordered by numbers, (not by alphabet!)
+  <br>For example, let you have 100 files named file1 file2... file10... Will they
+  show in any file manager in right order? No! (Exept for Windows XP's explorer)
+  So, we start my plugin, search for problem files' folder, enter parameters and all!
+  Press ÎĘ, wait and receive result. Program is not foolproof, be care. 
+  <center> <img width=345 height=182 src="renumber_en.gif"></center>
+  <ol>
+   <li>Input folder. On the right - button to select folder, direct editings it
+   forbidden. Because of standard function used, translation of this dialogue is
+   not performed. The folder should exist. 
+   <li>Input file names. Here it is necessary to write a filename with number as
+   %nd, where n - minimum number of significant digits (for example, 001 - 3
+   significant digits). If you need to enumerate files (convert a.jpg, b.jpg and so on
+   into 001.jpg, 002.jpg..., then you should use special renamer, for example, built in
+   Total Commander utility). 
+   <li>Output filename. Must be written like input file name, only that n was not
+   less number of significant digits last file's number. If want to return all on
+   an old place, swap an old and new name and repeat conversion. 
+   <li>Boundaries of conversion. Files with numbers in given bounds will be processed.
+   Strictly speaking, limits can be specified inexact - nonexistent files are skipped
+   without problems, so if you have only files 1.jpg and 2.jpg and you will transform
+   them in 001.jpg and 002.jpg, you can leave default bounds (from 0 up to 1000),
+   all will pass as necessary, but spent more time. Besides if you have 5000 files
+   and you convert they to 4 significant digits, than you should use bounds from 0
+   to 999 (files with numbers more than 999 are satisfy condition. You can specify
+   full range - anything terrible (except for unproductive loss of time) will not take place. 
+   <li>Start. Everything was detailer earlier. You can also start processing by pressing Enter in edit box. 
+   <li>Exit from the program with saving of the data. Also you can exit by pressing Esc. 
+   <li>Progress bar. Shows operation's progress. When file not exists, moves faster, when
+   execute operation... 
+  </ol>
+ <li>~patch
+  <br>Modification of the file instead of the hexadecimal editor
+  <br>Sometimes it is required correct something in the file of the game (for
+  example, to reach unlimited ammo, fuel or health), and the hexadecimal editor
+  is not present in your system. Then we use my plugin, we copy here parameters
+  from a magazine (in general, the algorithm was born, when it was required URGENTLY
+  to enter cheat into the game, and cheat was as advice: write in such file on such
+  offset such bytes). 
+  <center> <img width=345 height=161 src="patch_en.gif"></center>
+  <ol>
+   <li>File for modification. On the right - button to select file, direct editing
+   forbidden. You can find file name in cheat's description. File must not be read-only!
+   <li> Offset in the hexadecimal format without leading 0x and $. Take it from the description. 
+   <li> New data. Size detected automatically (from string's length), so be carefull
+   when entering data. Take it from description. 
+   <li>Is it necessary to create a backup copy. If so, you can restore the original file
+   and continue experiments. 
+   <li> Start conversion. Also it is possible to start by pressing Enter from text boxes. 
+   <li> Exit with saving of parameters. It is possible also to exit on pressing Esc. 
+  </ol>
+ <li>~pcopy
+  <br>Partial copying - clone of the utility PieceCopy, with source
+  <br>Sometimes it is required to copy the file not completely, but partially,
+  for example, only first 100 bytes. It can appear useful, if it is necessary to
+  show gigabytes MP3 collection to the friend, but it is on the hard disk, and
+  you have no such number of CD-RWs.
+  <br>Firstly, I need to test the install generator, it was necessary some times
+  compile all script. It takes about 15 minutes - too many to be good. I create
+  this program and compress only first 100 bytes. These files were compressed
+  after some seconds and I could debug script very fast. Some months later, another
+  install generator's script was debugged by same way. 
+  <center> <img width=300 height=173 src="pcopy_en.gif"> </center>
+  <ol>
+   <li>Input file. On the right - button to select file, but is possible to enter
+   it manually. You can use masks in file name. The search will be performed until
+   given depth (see item 6) reached. Full input's directory structure will be
+   replicated in output folder. You MUST NOT specify output directory enclosed to
+   input - this will perform an unknown error. Masks same, as by search in an
+   operating system on F3 or in Norton Commander on Alt-F7. 
+   <li>Output file. On the right - button to select, but is possible to edit manually.
+   The directory of output files should not lay inside the directory for input files
+   - differently there will be a uncontrollable filling of a disk space by stub files
+   and the output directory should completely be deleted. In a name of an output
+   file masks of the following sort also are allowed: 
+   <ul>
+    <li><i> *</i> Or <i>*.*</i> - is substituted on a real name of the processed file with extension 
+    <li> <i>*.ext</i> - is substituted on a filename with extension .ext 
+    <li> <i>name.*</i> - is substituted on the file name with source extension 
+    <li> <i>{filename}</i> - is substituted on complete filename 
+    <li> <i>{ filename i1}</i> - is substituted on a piece of a filename, since i1 position 
+    <li> <i>{ filename i1 i2}</i> - is substituted on a piece of a filename with i1 position of length i2 
+    <li> <i>{name}</i>, <i>{name i1}</i>, <i>{name i1 i2}</i> - same, but only for a filename (without the extension) 
+    <li> <i>{ext}</i>, <i>{ext i1}</i>, <i>{ext i1 i2}</i> - same, but for the extension (with a point) 
+   </ul>
+   <li>Beginning and length - offset, whence copying starts and its length. It is
+   possible to specify a size like this: ... g... m... k... - accordingly, number
+   of a gigabyte, megabyte, kilobyte and byte. The fractions (like 1.44 Mb) are
+   not supported (but it is possible to write like 1M450K). The register has no
+   value. It is possible to use blanks, but only to improve readership - algorithm ignores blanks. 
+   <li>Start conversion. In an operating time in status line (see item 7) you can see
+   processed file. After completion of conversion, status will reset. The conversion
+   can be stopped by the "stop" button. However it will take a short time (depending
+   on the output folder's drive speed), last file will completely copied first.
+   Also conversion can be started by the button Enter from text boxes. 
+   <li>Exit from the program with saving of the data. Also it is possible to exit on Esc. 
+   <li>Maximum deep of folders. Most left position - zero (no recurce search). The
+   most right position - 8 subfolder's depth, corresponds to the standard ISO. It
+   allows to set the output directory inside input (use with caution!). 
+   <li>Status line. Shows a state of the program, or name of the processed file. 
+  </ol>
+ <li> ~m3ufresh
+  <br>Update references in M3U files (playlist's for Winamp and other players)
+  <br>If you have many playlists (for example, created in WinAmp), but moved
+  many files around directories, this utility will help fastly restore correct
+  references. The program simply searches for the first file with the same name,
+  as absent and writes the reference to this file in playlist. Certainly, at
+  renaming files the given utility will not help.
+  <br>Example: a number of MP3 files of the different performers laid in one
+  directory. There were some playlists for them. Then files have decomposed in
+  the directories (depending on the performers and albums), but did not rename.
+  Certainly, playlists became incorrect, WinAmp can not find files, that is why
+  does not play back them.
+  <br>Note: if there are some files with an identical name, the program selects
+  first retrieved. 
+  <center> <img width=300 height=166 src="m3u_en.gif"> </center>
+  <ol>
+   <li>Input playlist. On the right - button to select, the manual editing
+   forbidden. Should be created manually, or in Winamp. The operation with other
+   playlist's types is not guaranteed. The file should exist. 
+   <li> Output playlist. On the right - button to select, the manual editing
+   forbidden. When deleting "dead" references (item 3) deleted only string with
+   file name, comment (usually, containing the extended information for the file)
+   remains. Therefore after processing the file, I recommend to open it in WinAmp
+   (or similar program), refresh the information and save the file. 
+   <li>If checked, references to unfound files will be saved, otherwice - removed. 
+   <li>If checked, references to files will be localized to output playlist's folder,
+   otherwise - a complete path (with the disk and all directories). Network (UNC)
+   names are not supported. 
+   <li> Start conversion. The process can be interrupted at any moment, but it will
+   take some seconds to finish last search operation. If the process is interrupted
+   by the user, the output file is not saved. Also conversion can be started on Enter
+   from text boxes. 
+   <li>Exit from the program with saving of a state. Also it is possible to exit on Esc. 
+   <li>Status lines - shows, what file now handles the program. 
+  </ol>
+ <li><a href="book_en.html">~BookGen</a>
+  <br>Helps you to print a book in Word practically any version 
+ <li><a href="book2_en.html">~BookGen2</a>
+  <br>This helps you to print books in ACDSee 
+ <li><a href="id3_en.html">~Id3Copy</a>
+  <br>Copying and change ID3 tags
+ <li><a href="txthtm_en.html">~Txt2htm</a>
+  <br>Conversion of the text tables into HTML tables
+ <li><a href="list_en.html">~ListGen</a>
+  <br>Create the list of existing files
+  <li>~ListGen2
+   <br>Create list of URLs to use in download manager
+   <br>Simply set appropriate parameters and press "Start". If manager running
+   and supports clipboard, press "To clip", otherwice press "To file" and export
+   list to manager.
+   <center><img src="list2_en.gif"></center>
+   <ol>
+    <li>Set link, where appropriate numbers replaced with given string.
+    <li>If you need double enumeration
+    <li>Start of sequence
+    <li>End of sequence
+    <li>Step of sequence
+    <li>Length of sequence (leading zeroes will be placed).
+    <li>Replacing string.
+    <li>Generated sequence. Press "Start" to get it.
+    <li>Start generation. Also, you can start it by Enter from text boxes.
+    <li>Saves generated sequence to file
+    <li>Saves generated sequence to clipboard
+    <li>Exit with saving of a state. Also, you can exit by Esc.
+   </ol>
+   Note: primary index varies faster, than secondary (when secondary indexing used).
+  <li>~FileCut
+   <br>Cut file into pieces of specified size
+   <center><img src="cutter_en.gif"></center> 
+   <ol>
+    <li>Input file. On the right - button to select. Manual correcting forbidden.
+     Attention! File is input for cutting and output for concatenation!
+    <li>Output file. On the right - button to select. Make sure, that you specify
+     special symbol %nd in this name, where n is number of significant digits in
+     number (for example, 001 - 3 symbols). If there are no such symbol, next
+     files will overwrite previous and you will lost data. Exception - if you
+     generate sequence to floppy (or other removable) media, but in this case you
+     cann't control concatenate operation. Attention! These files are input for
+     concatenating operation and output for cutting.
+    <li>Work mode - cut or concat. Depend on selected mode, item 4 can vary.
+    <li>Work parameters:
+     <ul>
+      <li>On cut - size of parts divided by semicolon. If file size is more than
+       sum of specifyed sizes, then remaining files will have size, as last size
+       specified (for example, 1m440k in out case).
+      <li>On concat - part numbers, subsituted to mask. Parts may be specifyed as
+       numbers or interval divided by comma, for example <kbd>1,2,5-8</kbd> means
+       numbers 1,2,5,6,7,8. You can specify numbers in any order, even <kbd>8,7,
+       6,5,4,3,2,1</kbd>, but you must know, what are you doing. If list empty, 
+       then program will try to automatically guess it, seeking for first contignous
+       interval of numbers, satisfying given mask. You should use this option only
+       if parts created with this program and parts located on hard drive.
+      <li>On concat with list - list file name. On right - button to select.
+       In file you should specify all concatenating files, one name at a line. 
+       Empty lines and lines, started with semicolon ignored.
+     </ul>
+    <li>If checked, before each file part operation program will show a message. 
+     Useful, if you write or read parts directly from removable media - you will
+     have time to swap disks.
+    <li>If you work with removable media, you'd beter to uncheck this - diskettes are
+     pretty unreliable. But if you concat files from hard drive, then you may check
+     if, if you wish.
+    <li>Start processing. Also, you can start by pressing Enter in text boxes.
+    <li>Exit. Also, you can exit by pressing Esc.
+    <li>Status line. Display current file's name. Progress not displayed anywhere.
+    <li>A last version, you can create BAT file (idea came from Katarn's File Cutter)
+     - program will create BAT file named as a mask (but without a number). If you'll
+     put all files together and run that BAT, input file will be created without
+     this program. Part files are not deleted.
+   </ol>
+ </ul>
+ <b><font size=+1 color=blue>History:</font></b>
+ <br><font color=green>[+]</font> &nbsp;New feature
+ <br><font color=blue>[*]</font> &nbsp;Fixed bug
+ <br><font color=red>[-]</font> &nbsp;Removed feature 
+
+ <p><font size=+1 color=blue>Version 1.0 - 08.07.05</font>
+ <br><font color=green>[+]</font>&nbsp;Because of plugin changed name, history was reset and version started from 1.0 again.
+ 
+ <p><font size=+1 color=blue>Version 1.1 - 10.07.05</font>
+ <br><font color=green>[+]</font>&nbsp;New alias ~FileCut
+</body>
+</html>  
+
+

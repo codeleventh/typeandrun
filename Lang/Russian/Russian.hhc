@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<BODY>
+<OBJECT type="text/site properties">
+	<param name="FrameName" value="content">
+</OBJECT>
+<UL>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="О программе">
+	<param name="Local" value="aboutprogram.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Что, как да почем?">
+	<param name="Local" value="shareware.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Системные требования">
+	<param name="Local" value="systemperfomance.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Содержание дистрибутива">
+	<param name="Local" value="distrcontext.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Настройка программы">
+	<param name="Local" value="working.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Особенности создания алиасов">
+	<param name="Local" value="createaliases.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Использование консоли">
+	<param name="Local" value="runaliases.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Примеры полезных алиасов">
+	<param name="Local" value="samples.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Горячие клавиши">
+	<param name="Local" value="hotkeys.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Параметры коммандной строки">
+	<param name="Local" value="commandlineparams.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="FAQ - Часто задаваемые вопросы">
+	<param name="Local" value="faq.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="История создания">
+	<param name="Local" value="historycreated.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Благодарности">
+	<param name="Local" value="senks.htm">
+</OBJECT>
+<LI><OBJECT type="text/sitemap">
+	<param name="Name" value="Как со мной связаться">
+	<param name="Local" value="backaddress.htm">
+</OBJECT>
+</UL>
+</BODY></HTML>

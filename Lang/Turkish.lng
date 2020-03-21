@@ -1,0 +1,144 @@
+Rail Aliev <rail@iqchoice.com>
+4.0 RC
+
+Hata!
+Geçmiþi temizle:
+kayýt. Uyarý - geri alýnamaz!
+Kýsayol kullanýlamýyor! Görev çubuðunudaki ikonu kullanarak bu kýsayolu deðiþtiriniz...
+Hata! Alias adý veya eylemi belirtilmemiþ!
+Bütün dosyalar
+Gözat...
+Dizin seçiniz:
+
+%p %v hakkýnda...
+%p %v programýnýn resmi sitesi...
+Benim birinci e-postam...
+Benim ikinci e-postam...
+Kapat
+
+Ayarlar
+Genel
+Görünüm
+Renkler
+Yazýtipi
+Kýsayol
+EasyType
+Çalýþtýr
+Geçmiþ
+Yollar
+Registry
+Ayar
+Dil
+Ýptal ayarlarý
+Ayar düzenleyicisi
+Tamam
+Ýptal
+Uygula
+Açýlýþta programý göster
+Enter'den sonra programý sakla
+Kýsayolu iki kez kullandýktan sonra programý sakla
+Ýkonu görev çubuðunda göster
+Çerçeveyi göster (Windows 2000 ve üstü için geçerli)
+Program penceresinin saydamlýðý:
+Belirli bir süre etkisiz kalan programý otomatik sakla (milisaniye):
+Öncelik:
+-1 - Düþük
+0 - Normal
+1 - Yüksek
+2 - Gerçek zamanlý
+X'e göre programýn konumu
+Y'e göre programýn konumu
+Pencere geniþliði:
+Pencere yüksekliði:
+Çerçeve klaýnlýðý:
+Metin rengi:
+Pencere rengi:
+Çerçeve rengi:
+Yazýtýpini deðiþtir...
+EasyType kullanma
+Standart EasyType kullan
+BASH benzeri EasyType (Tab ile)
+EasyType'i iç komutlar için kullan
+EasyType'i aliaslar için kullan
+EasyType'i sistem aliaslarý için kullan
+EasyType'i gezgin için kullan
+EasyType'i geçmiþ için kullan
+Büyük küçük harfe duyarlý (þiöç <> ÞÝÖÇ)
+Alias sonuna boþluk ekle
+Ýç komutlarý çalýþtýr
+Aliaslarý çalýþtýr
+Sistem aliaslarýný çalýþtýr
+Baðlantýlarý aç
+E-posta adreslerinii aç
+Dizinleri aç
+Dosyalarý çalýþtýr
+Programlarý çalýþtýr (geriye kalan)
+Geçmiþi dosyaya yazma
+Geçmiþi dosyaya yaz
+Aliaslarý kaydet
+Aliaslarýnýn parametrelerini kaydet
+Sistem aliaslarýný kaydet
+Sistem aliaslarýnýn parametrelerini kaydet
+Baðlantýlarý kaydet
+E-posta adreslerini kaydet
+Dizinleri kaydet
+Programlarý kaydet (geriye kalan)
+Geçmiþ büyüklüðü (0 - sýnýrsýz)
+Internet tarayýcýnýz:
+Dosya yöneticiniz (örn.: explorer.exe):
+Komut satýrý programý (örn.: command.com):
+Komut satýrý proramý için Enter tuþu ile gönderilen parametreler:
+Komut satýrý proramý için Shift+Enter tuþu ile gönderilen parametreler:
+Windos açýlýþýnda çalýþtýrma
+HKLM - bütün kullanýcýlar
+HKCU - geçerli kullanýcý
+Gezgin sað týklama menüsüne "Add to %p..." seçeneði ekle
+Çalýþtýrýlan aliaslarý menüdeki yerini yukarýya kaydýr
+Ayar dosyayýsýn belirli aralýklara yeniden oku (milisaniye):
+Dil seçiniz:
+Yazar:
+Sürüm:
+Gerial fonksiyonunu kullan
+Alias ismi:
+Eylem:
+Parametreler:
+Geçerli dizin:
+Pencere durumu:
+Tarihçeye ekle
+Aliaslarý yukarýya kaydýr
+Öncelik:
+Yeni alias (&N)
+Aliasý sil (&D)
+0 - Gizli
+1 - Normal
+2 - Küçültülmüþ
+3 - Tam açýlmýþ
+4 - Normal foküssüz
+5 - Foküssüz küçültülmüþ
+0 - Ayarlardaki gibi
+1 - Herzaman
+2 - Asla
+0 - Ayarlardaki gibi
+1 - Herzaman
+2 - Asla
+-1 - Düþük
+0 - Normal
+1 - Yüksek
+2 - Gerçek zamanlý
+
+%p %v
+Uygulama penceresini göster
+Uygulama penceresini sakla
+Kes
+Kopyala
+Yapýþtýr
+Temiizle
+Tümünü seç
+Ýptal
+Ayarý oku
+EasyType'ý aç/kapa
+Ayarlar...
+Ayar düzenliyisici...
+Yardým
+%p programý hakkýnda...
+Çýkýþ

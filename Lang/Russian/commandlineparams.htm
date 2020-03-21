@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>Параметры командной строки</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+</head>
+<body style="font-family: MS Sans Serif; font-size: 10pt; text-align: justify;">
+
+<span style="font-family: Helvetica, Arial; font-size: 12pt; width: 100%; background-color: #8CB9FD; padding: 2px 2px 2px 2px;"><b>Параметры командной строки</b></span><br>
+
+<p><b>Запуск:</b></p>
+<p style="font-family:Courier New; font-size:9pt;">
+
+<span style="color:#FF0000">TypeAndRun.exe</span><span style="color:#000000">&nbsp;[</span><span style="color:#007F00">--settings=path</span><span style="color:#000000">]&nbsp;[</span><span style="color:#007F00">--config=path</span><span style="color:#000000">]&nbsp;[</span><span style="color:#007F00">--configold=path</span><span style="color:#000000">]&nbsp;[<span style="color:#007F00">--history=path</span><span style="color:#000000">]&nbsp;[<span style="color:#007F00">--plugins=path</span><span style="color:#000000">]&nbsp;[<span style="color:#007F00">--add=path</span><span style="color:#000000">]&nbsp;[<span style="color:#007F00">--exec=string</span><span style="color:#000000">]</span></p>
+
+<p><b>Где:</b></p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--settings=path</span> - указать файл настроек. Если параметр --settings не указан, то используется файл TypeAndRun.ini в главной папке программы. Path - полный путь к *.ini файлу. Если в Path указано только имя файла, то используется главная папка программы. Параметр игнорируется, если TypeAndRun уже запущен.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--config=path</span> - указать файл конфига с алиасами. Если параметр --config не указан, то используется файл Config.ini в главной папке программы. Path - полный путь к *.ini файлу. Если в Path указано только имя файла, то используется главная папка программы. Параметр игнорируется, если TypeAndRun уже запущен.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--configold=path</span> - указать файл конфига с удаленными мертвыми алиасами. Если параметр --configold не указан, то используется файл, находящийся там же и имеющей такое же имя (с добавлением '~'), что и файл конфига. Path - полный путь к *.ini файлу. Если в Path указано только имя файла, то используется главная папка программы. Параметр игнорируется, если TypeAndRun уже запущен.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--history=path</span> - указать файл истории. Если параметр --history не указан, то используется файл History.ini в главной папке программы. Path - полный путь к *.ini файлу. Если в Path указано только имя файла, то используется главная папка программы. Параметр игнорируется, если TypeAndRun уже запущен.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--plugins=path</span> - указать файл настроек плагинов. Если параметр --plugins не указан, то используется файл Plugins.ini в главной папке программы. Path - полный путь к *.ini файлу. Если в Path указано только имя файла, то используется главная папка программы. Параметр игнорируется, если TypeAndRun уже запущен.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--add=path</span> - добавить алиас в конфиг. Если параметр --add не указан, то добавление не происходит. Path - полный путь к файлу или папке. Если Path опущен, то добавление не происходит. Параметр работает, даже если TypeAndRun уже запущен.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--exec=string</span> - запустить строку string с помощью консоли. Команда аналогична набору строки в консоли и нажатия Enter.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--multiusers=[1\0]</span> - указывает программе, в каком режиме работать с конфигами. Если указать 0, то будут использоваться конфиги из директории TypeAndRun. Если 1, то используются конфиги из директории %APPDATA%\TypeAndRun. Если же параметр --multiusers не указан, то используются настройки TypeAndRun из реестра.</p>
+
+<p>В том случае, когда в параметре path или string встречаются пробелы, его необходимо взять в кавычки.</p>
+<p>Порядок следования параметров может быть произвольным.</p>
+<p>Внимание! Неправильное указание вышеприведенных параметров может привести к ошибке и потере ваших конфигов! Сохраните все файлы *.ini перед тем, как экспериментировать с параметрами командной строки.</p>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>Some useful examples</title>
+</head>
+<body style="font-family: MS Sans Serif; font-size: 10pt; text-align: justify;">
+
+<span style="font-family: Helvetica, Arial; font-size: 12pt; width: 100%; background-color: #8CB9FD; padding: 2px 2px 2px 2px;"><b>Some useful examples</b></span><br>
+
+<p style="font-family:Helvetica,Arial;"><b>1) Fast search through internet search engines</b></p>
+General pattern is "%alias% searched_term".<br>
+Where %alias% may be replaced with any of the following:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+yandex|http://ya.ru/yandsearch?text=%s<br>
+ya|http://ya.ru/yandsearch?text=%s<br>
+google|http://www.google.com/search?q=%s&hl=en<br>
+rambler|http://search.rambler.ru/cgi-bin/rambler_search?words=%s&amp;where=1<br>
+aport|http://sm.aport.ru/scripts/template.dll?r=%s&amp;That=std<br>
+lycos|http://poisk.lycos.ru/cgi-bin/pursuit?query=%s&amp;cat=loc&amp;who=ru&amp;x=26&amp;y=10<br>
+</span>
+<br>
+Get whois information from RIPE:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+RIPE|http://ripe.net/perl/whois?form_type=simple&full_query_string=&searchtext=%s<br>
+</span>
+<br>
+Search FTP:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+FTP_search|www.filesearch.ru/cgi-bin/s?q=%s&t=f&d=&x=14&y=15<br>
+</span>
+<br>
+Search Moshkov library:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+Moshkov|www.lib.ru/TitleSearch?Search=%s<br>
+</span>
+<br>
+Search iXBT hardware web portal (Russian):<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+ixbt_serch|http://rose.ixbt.com/cgi-bin/search.cgi?q=%s<br>
+</span>
+
+<p style="font-family:Helvetica,Arial;"><b>2) Fast translation</b></p>
+Russian to English. General pattern is "ruen url".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+ruen|http://www.translate.ru/url/tran_url.asp?lang=ru&amp;url=%s&amp;direction=re&amp;template=General&amp;cp1=NO&amp;cp2=NO&amp;autotranslate=on&amp;transliterate=on&amp;psubmit2.x=50&amp;psubmit2.y=12<br>
+</span>
+<br>
+English to Russian. General pattern is "enru url".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+enru|http://www.translate.ru/url/tran_url.asp?lang=ru&amp;url=%s&amp;direction=er&amp;template=General&amp;cp1=NO&amp;cp2=NO&amp;autotranslate=on&amp;transliterate=on&amp;psubmit2.x=50&amp;psubmit2.y=12<br>
+</span>
+<br>
+WorldLingo Translate - Chinese Simplified to English.<br>
+General pattern is "chen url".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+chen|http://www.worldlingo.com/wl/mstranslate/UP26384/T1/P2/l/microsoft/computer_translation.html?wl_lp=ZH_CN-EN&amp;wl_fl=0&amp;wl_rurl=http%3A%2F%2F%s%2F&amp;wl_url=%s&amp;wlg_table=-3<br>
+</span>
+<br>
+Find acronym (commonly used abbreviation, e.g. RTFM):<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+acronymfinder|http://www.acronymfinder.com/af-query.asp?String=exact&Acronym=%1<br>
+</span>
+<br>
+Search word meaning on urbandictionary.com (slang dictionary, acronyms etc.):<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+urbandictionary|http://www.urbandictionary.com/define.php?term=%s<br>
+</span>
+<br>
+
+<p style="font-family:Helvetica,Arial;"><b>3) Dictionary reference</b></p>
+Rambler Dictionary - translation words.<br>
+To translate a word type "eng2rus word" or "rus2eng word".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+eng2rus|http://www.rambler.ru/dict/scripts/relay-enru.cgi?query=%s&amp;where=enru&amp;start=0&amp;count=15<br>
+</span>
+Для использования наберите в консоли "rus2eng слово"<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+rus2eng|http://www.rambler.ru/dict/scripts/relay-ruen.cgi?query=%s&amp;where=ruen&amp;start=0&amp;count=15<br>
+</span>
+<br>
+Info-portal of Russ Portal Company.<br>
+To reference the encyclopaedia type "? word".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+?|http://www.rubricon.com/qe.asp?qtype=1&amp;id=0&amp;srubr=0&amp;fstring=%s<br>
+</span>
+<br>
+Lingvo translator at Yandex.ru.<br>
+Type "translate russian_word" to translate from Russian into English. Type "translate english_word" to translate from English into Russian.<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+translate|http://lingvo.yandex.ru/cgi-bin/lingvo.pl?text=%s<br>
+</span>
+
+<p style="font-family:Helvetica,Arial;"><b>4) For web-designers.</b></p>
+W3 Schools contains detailed info on html tags.<br>
+To get info on a specific tag, just type "tag tag".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+tag|http://www.w3schools.com/tags/tag_%s.asp?output=print<br>
+</span>
+<br>
+W3 Schools validator for check your site:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+validator_html|http://validator.w3.org/check?uri=http%3A%2F%2F%s<br>
+validator_css|http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2F%s&usermedium=all<br>
+</span>
+
+<p style="font-family:Helvetica,Arial;"><b>5) Web addresses without www. or http://</b></p>
+This alias saves you typing http:// and www.<br>
+Just use this pattern: "` amazon.com" and the browser window will become active after start.<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+`|C:\Program&nbsp;Files\Internet&nbsp;Explorer\IEXPLORE.EXE<br>
+</span>
+<br>
+The following alias functions in the same way, but the browser window opens on the background. It could be handy if you want to open a URL while browsing in another window.<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+``|C:\Program&nbsp;Files\Internet&nbsp;Explorer\IEXPLORE.EXE|||5<br>
+</span>
+<br>
+Certainly, you may substitute the browser path in these aliases for your favourite one.
+
+<p style="font-family:Helvetica,Arial;"><b>5) Virtual folders</b></p>
+To open Windows virtual folders (e.g. My Documents or Control Panel) you should use their special identification numbers instead of names:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+my_computer|explorer|::{20D04FE0-3AEA-1069-A2D8-08002B30309D}<br>
+my_network_places|explorer|::{208D2C60-3AEA-1069-A2D7-08002B30309D}<br>
+my_documents|explorer|::{450D8FBA-AD25-11D0-98A8-0800361B1103}<br>
+recycle_bin|explorer|::{645FF040-5081-101B-9F08-00AA002F954E}<br>
+printers_and_faxes|explorer|::{2227A280-3AEA-1069-A2DE-08002B30309D}<br>
+network_connections|explorer|::{7007ACC7-3202-11D1-AAD2-00805FC1270E}<br>
+sheduled_tasks|explorer|::{D6277990-4C6A-11CF-8D87-00AA0060F5BF}<br>
+</span>
+
+</body>
+</html>
+

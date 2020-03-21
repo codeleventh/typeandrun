@@ -1,0 +1,22 @@
+Как получить все Dial-Up соединения
+
+Способ 1 - из реестра:
+
+Uses Registry; 
+
+Function DUNGetConnections( Out OutList : TStringList) : Boolean; 
+var Reg : TRegistry; 
+begin 
+OutList.Clear; 
+Reg := TRegistry.Create; 
+Reg.RootKey := HKEY_CURRENT_USER; 
+if Reg.OpenKey('\RemoteAccess\Profile', False) then 
+  begin 
+    Reg.GetKeyNames(OutList); 
+    Result := True; 
+  end 
+else begin 
+Result := False; 
+end; 
+Reg.Free; 
+end;

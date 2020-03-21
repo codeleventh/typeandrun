@@ -1,0 +1,256 @@
+author = Paul Kiss [pk280181@yandex.ru]
+version = 4.7 beta2
+
+
+error = Помилка!
+clearhistory = Очистити історію:
+clearhistory2 = записів. Увага - відміна буде неможлива! [&C]
+cannotusehotkey = Неможливо використати гарячу клавішу! Скористайтесь іконкою на Паналі задач, щоб її змінити...
+erroraliasname = Помилка! Не вказано псевдонім або його дія!
+allfiles = Всі файли
+exefiles = Файли, що виконуються
+wavfiles = файли Waveform
+selectfile = Вибрати файл...
+selectdirectory = Вкажіть директорію:
+deletethisalias = Знищити цей псевдонім?
+replacepath = Замінити шлях в цьому псевдонімі?
+decheckcomplete = Перевірка на мертві псевдоніми завершена!
+checkingalias = Перевірка псевдонінів:
+generationfilelist = Генерується список файлів...
+statusloaded = Статус: загружено
+statusunloaded = Статус: не загружено
+plugins = Плагіни
+badplugin = Це не плагін %p %v!
+
+aboutprogram = Про програму %p %v...
+visitoffsite = Відвідати офіційний сайт програми %p %v...
+mailme1 = Зв’язатися зі мною за електронною адресою №1...
+mailme2 = Зв’язатися зі мною за елетронною адресою №2...
+close = Вихід
+
+
+settings = Налаштування
+settingsappearance = Відображення
+settingsconsolelook = Вигляд
+settingshintpopup = Підказка
+settingsdropdownlist = Dropdown список
+settingscolors = Кольори
+settingsfont = Шрифт
+settingshotkey = Горяча клавиша
+settingseasytype = Автодоповнення
+settingsexec = Запуск
+settingshistory = Історія
+settingspath = Шляхи
+settingsregistry = Реєстр
+settingslanguage = Мова
+settingsundo = Нашаштування відміни
+settingssounds = Налаштування звуків
+settingsconfig = Конфіг
+settingseditconfig = Редактор конфігу
+settingsplugins = Плагіни
+
+ok = OK
+cancel = Відмінити
+apply = Застосувати
+
+showconsoleonstart = Показувати вікно програми при старті
+closeafterenter = Зачиняти вікно програми після натискання Enter
+hideconsoletrigger = Ховати вікно програми після повторного натиснення гарачої клавіши
+systemtrayicon = Показувати іконку в системному треї
+showballontips = Виводити повідомлення в підказці системного трею (тільки ME та >=NT5)
+putmouseintoconsole = Поміщати курсор миші у вікно консолі при кожному її визові.
+autohideconsole = Автоприховування вікна програми через (в мілісек.):
+prioriincantatem = Пріорітет:
+priorilow = -1 - Низький
+priorinormal = 0 - Нормальний
+priorihigh = 1 - Високий
+priorirealtime = 2 - В реальному часі
+
+showcenterx = Показувати в центрі за X
+showcentery = Показувати в центрі за Y
+consolewidth = Ширина вікна:
+consoleheight = Висота вікна:
+consolewidthpercent = (в відсотках від ширини екрану)
+bordersize = Ширина рамки:
+showonlyborder = Показувати тільки рамку (тільки >=NT5)
+transparent = Прозорість вікна програми (тільки >=NT5):
+
+showhint = Показувати інформацію про псевдоніми, які вводяться, та системні псевдоніми
+aliashint = Запуск (псевдонім):
+sysaliashint = Запуск (системний псевдонім):
+
+dropdownlinenum = Кількість рядків в dropdown списку:
+
+notmaletcolor = Автодоповнення увімкнено
+noetcolor = Автодоповнення вимкнено
+fontcolor = Колір тексту:
+consolecolor = Колір вікна програми:
+bordercolor = Колір рамки:
+hinttextcolor = Колір тексту підказки:
+hintcolor = Колір фону підказки:
+dropdowntextcolor = Колір dropdown списку:
+dropdowncolor = Колір фону dropdown списку:
+
+changefont = Змінити шрифт...
+fontautosize = Автоматично підгоняти розмір шрифту під висоту вікна
+textalign = Виравнювання тексту:
+alignleft = По лівій стороні
+aligncenter = По центру
+alignright = По правій стороні
+applyenglish = Активізувати англ. мову при кожному визові консолі
+lockenglish = Використовувати тільки англ. мову в консолі
+
+hotkeyalt = &Alt
+hotkeyctrl = &Ctrl
+hotkeyshift = &Shift
+hotkeywin = &Win
+
+noet = Не використовувати автодоповнення
+standartet = Використовувати стандартне автодоповнення
+linuxt = Використовувати доповнення як в BASH (після натискання Tab)
+etinternal = Використовувати автодоповнення для внутрішніх команд
+etalias = Використовувати автодоповнення для псевдонімів
+etsysalias = Використовувати автодоповнення для системних псевдонімів
+etpath = Використовувати автодоповнення для браузера шляхів
+etplugin = Використовувати автодоповнення для плагінов
+ethistory = Використовувати автодоповнення для історіі
+addspace = Додавати пробіл до назви псевдоніму
+casesensitivity = Чуттєвість до регістру (фіва <> ФІВА)
+applyet = Вмикати стандартне автодоповнення при кожному визові консолі
+advancedbackspace = Використовувати розширену обробку натиснень BackSpace
+advancedspace = Використовувати розширену обробку натиснень Space
+deleteduplicates = Видаляти дублікати зі списку автодоповнення
+
+runinternal = Запускати внутрішні команди
+runalias = Запускати псевдоніми
+usedefaultaction = ... з діями оболонки за замовченням
+runsysalias = Запускати системні псевдоніми
+runwww = Відкривати посилання
+runemail = Відкривати адреси електронної пошти
+runfolder = Відкривати папки
+runfile = Запускати файли
+runplugin = Запускати плагіни
+runother = Запускати команди оболонки (все інше)
+
+nohistory = Не зберігати історію в файл
+hisfile = Зберігати історію в файл
+hisinternal = Зберігати внутрішні команди
+hisinternalparam = ... з параметрами
+hisalias = Зберігати псевдоніми
+hisaliasparam = ... з параметрами
+hissysalias = Зберігати системні псевдоніми
+hissysaliasparam = ... з параметрами
+hiswww = Зберігати посилання
+hisemail = Зберігати адреси електронної пошти
+hisfolder = Зберігати папки
+hisplugin = Зберігати плагіни
+hispluginparam = ... з параметрами
+hisother = Зберігати команди оболонки (всі інші або невідомі)
+hiscommandline = Зберігати строки, передані через командний рядок (--exec=строка)
+hismessage = Зберігати строки передані через повідомлення WM_COPYDATA окну консолі
+invertscroll = Інверсія прокрутки історіі
+maxhistorysize = Максимальний розмір історіі в строках (0 - необмежений):
+
+yourbrowser = Ваш інтернет браузер:
+yourfm = Ваш файл-менеджер (наприклад: explorer.exe):
+yourshell = Ваш інтерпретатор командного рядку (наприклад: command.com):
+enterparam = Параметри, що передаються інтерпретатору командного рядку після натиснення Enter:
+shiftenterparam = Параметри, що передаються інтерпретатору після натиснення Shift+Enter:
+
+noautostart = Не запускати разом з Windows
+starthklm = HKLM - для всіх користувачів 
+starthkcu = HKCU - для цього користувача
+shellintegration = Додати "Add to %p..." в контекстне меню в Explorer’і
+
+useundo = Використовувати функцію відміни
+
+enablesounds = Увімкнути звуки
+browsesound = Огляд
+soundexecinternal = Запуск внутрішньої команди
+soundexecalias = Запуск псевдоніму
+soundexecsysalias = Запуск системного псевдоніму
+soundexecurl = Запуск посилання
+soundexecemail = Запуск електронної адреси 
+soundexecfolder = Запуск директорії
+soundexecfile = Запуск файлу
+soundexecplugin = Запуск плагину
+soundexecallother = Запуск всього іншого
+
+delectlang = Вибір мови:
+authorlang = Автор:
+versionlang = Версія:
+
+moveupalias = Переміщати псевдоніми, що запускаються, наверх конфігу
+autosortconfig = Автоматичне сортування псевдонімів за ім’ям
+autoreread = Автоматично перечитувати конфіг кожні (в мілісекундах):
+rereadhotkey = Перечитувати Config.ini при кожному виклику консолі
+createdabackup = Створювати файл ~Config.ini, який вмішує знищені мертві псевдоніми
+confirmkillda = Питати підтвердження на знищення мертвого псевдоніму
+searchdadisk = Шукати файл на всіх дисках
+searchdaplugin = Шукати псевдонім в підключених плагінах
+searchdaonstart = Робити перевірку на мертві псевдоніми з кожним запуском %p
+searchdanow = Шукати мертві псевдоніми [&C]
+backallda = Повернути все в конфіг [&B]
+
+aliasname = Назва псевдоніму:
+aliasaction = Дія:
+aliasparam = Параметри:
+aliaspath = Активна папка:
+aliasstate = Стан вікна:
+aliasaddhistory = Додавати в історію?
+aliasmoveup = Пересувати псевдоніми наверх конфігу?
+aliasprioriincantatem = Пріорітет:
+aliascomment = Коментар:
+newalias = Створити псевдонім [&N]
+deletealias = Усунути псевдонім [&D]
+statehide = 0 - Приховано
+statenormal = 1 - Нормально
+stateminimize = 2 - Мінімізовано
+statemaximize = 3 - Максимізовано
+statenormalnofocus = 4 - Нормально без фокусу
+stateminimizenofocus = 5 - Мінімізовано без фокусу
+addhisdefault = 0 - Згідно налаштувань
+addhisalways = 1 - Завжди
+addhisnever = 2 - Ніколи
+moveupdefault = 0 - Згідно налащтувань
+moveupalways = 1 - Завжди
+moveupnever = 2 - Николи
+aliaspriorilow = -1 - Низький
+aliaspriorynormal = 0 - Нормальний
+aliaspriorihigh = 1 - Високий
+aliaspriorirealtime = 2 - В реальному часі
+
+pluginname = Ім’я:
+pluginversion = Версія:
+plugindesc = Опис:
+pluginauthor = Автор:
+plugincopyright = Права:
+pluginsite = Сайт:
+pluginpath = Шлях:
+addplugin = Додати плагін... [&A]
+deleteplugin = Усунути плагін [&D]
+loadplugin = Загрузити плагін [&L]
+unloadplugin = Вигрузити плагін [&L]
+loadpluginonstart = Загружати плагін при старті %p
+savehistoryplugin = Зберігати історію для цього плагіна
+
+
+systemtrayhint = %p %v
+consoleshow = Показати вікно програми
+consolehide = Зховати вікно программи
+consolecut = Вирезати
+consolecopy = Копіювати
+consolepaste = Вставити
+consoleclear = Очистити
+consoleselectall = Виділити все
+consoleundo = Відміна
+consolenewalias = Створити псевдонім...
+consoledeletestring = Видалити строку
+consoleopenfolder = Відкрити папку псевдоніму
+consolerereadconfig = Перечитати конфіг
+consoleonoffet = Увімк.\Вимк. автодоповнення
+consolesettings = Налаштування...
+consoleconfigeditor = Редактор конфігу...
+consolehelp = Справка
+consoleaboutprogram = Про програму %p...
+consoleexit = Вихід

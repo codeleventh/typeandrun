@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>  
+<head>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=Windows-1250">
+<title>tar_amp plugin description</title>
+</head> 
+<body>
+ 
+<center>  
+<h1>Plugin of the extended handle of Winamp, FooBar2000, Apollo, BSPlayer</h1> 
+<h2>Version: 1.15</h2> 
+
+</center>
+<h2>Author: Python &lt;smisoft@rambler.ru&gt; (c) SmiSoft (SA)</h2> 
+<h3>What is this:</h3> 
+<br>Intended to control popular players: Winamp, BSPlayer, FooBar2000, Apollo (the same as Winamp) through
+TypeAndRun's aliases. Sertainly, before you will use aliases, the appropriate
+player should be started. I recommend to use it together with plugin <em>tar_hotkey</em>
+or <em>tar_hotkeys</em>
+<br>The commands for Winamp are documentary only for versions above 2.6, for BSPlayer - above 0.84.
+Plugin usage for players of other versions can give undesirable result.
+<br>If more than one player started simultaneosely, then last player from the list
+(look before) will receive appropriate command.
+<h3>Aliases:</h3> 
+Please, read this instruction attentively. Many aliases use similar commands,
+and the detailed description with examples is given only for first aliases. 
+<h4>Aliases, working with all players:</h4>
+<ul>
+ <li>~play
+  <br>Start playback
+ <li>~pause
+  <br>To turn pause on/off
+ <li>~prev
+  <br>Go to previous track
+ <li>~next
+  <br>Go to next track
+ <li>~stop
+  <br>Stop playback
+ <li>~ampclose
+  <br>Close player 
+</ul>
+<h4>Aliases, working both with Winamp, and with BSPlayer. Aliases, that cann't work with FooBar too, checked separately:</h4> 
+<ul>
+ <li>~version
+  <br>Shows the version Winamp or BSPlayer in the internal format of appropriate players. In FooBar, opens About window.
+ <li>~volume
+  <br>Handle of a level of volume
+  <br><b>Parameters:</b> 
+  <ul>
+   <li><i>no parameters</i>
+    <br>Show volume level in persents. For BSPlayer only - Winamp and Foobar haven't this function.
+   <li><i>Unsigned integer</i> (for example "<kbd>~volume 12</kbd>")
+    <br>Set volume in percentage (1-100). If number above 100 or below 0 specifyed, the maximum/minimum levels will be accepted.
+   <li><i>Signed integer</i> (for example "<kbd>~volume +2</kbd>" or "<kbd>~volume -3</kbd>")
+    <br>Set relative volume level. The volume is increased (sign plus) or decreases (sign a minus) on the given number of units, but only in supported limits .
+   <li><i>Only sign</i> ("<kbd>~volume +</kbd>" or "<kbd>~volume -</kbd>")
+    <br>Increase (sign plus) or reduce (sign a minus) by the small value. Equivalent to pressing up/down arrows in player. 
+  </ul>
+ <li>~pos
+  <br>Change film's or song's play position
+   <br><b>Parameters:</b> 
+   <ul>
+    <li><i>no parameters</i>
+     <br>Show current films's or song's position in seconds. Unavailable in foobar. 
+    <li><i>Unsigned integer</i>
+     <br>Rewind to given position. The limits depend on duration songs. If film or song are not playing, the command is ignored. In Foobar, this command can work incorrectly if song position is more than song's duration 
+    <li><i>Signed integer</i> (for example, "<kbd>~pos +10</kbd>" or "<kbd>~pos -5</kbd>")
+     <br>Wind film's or song's forward or back on the given number of seconds. 
+    <li><i>Only sign</i>
+     <br>Wind film's or song's position a little forward or back. Equivalent to pressing of right/left arrows in player. 
+   </ul>
+ <li>~list
+  <br>Change playlist's position. Play mode (play/pause/stop) saved (in Winamp only).
+   <br><b>Parameters:</b> 
+   <ul>
+    <li><i>no parameters</i>
+     <br>Show current position in the playlist. Not supported in Foobar. 
+    <li><i>Unsigned integer</i>
+     <br>Set playlist's position to a given value. Songs are numbered from 1. If number more than playlist's amount specified, last song will be accepted (if Repeat off) or cycled song will be accepted (Repeat on). Not supported in Winamp. 
+    <li><i>Signed integer</i>
+     <br>Set relative playlist's position. If Repeat in Winamp On, the moving occurs on cycle, otherwice - up to 1 or playlist's amount. In BSPlayer Repeat mode unavailable. Shuffle not supported in this command. 
+    <li><i>Only sign</i>
+     <br>Switch to previous/next track. Same as pressing previous/nextt track. All player-depend options supported.
+   </ul>
+ <li>~clear
+  <br>Clears playlist. 
+</ul>
+<h4> Aliases, working only with Winamp and Foobar:</h4> 
+<ul>
+ <li>~repeat
+  <br>Repeat mode
+   <br><b>Parameters:</b> 
+   <ul>
+    <li><i>no parameters</i>
+     <br>Show Repeat status. Not supported with Foobar
+    <li><i>1</i>
+     <br>Enable Repeat
+    <li><i>0</i>
+     <br>Disable Repeat
+    <li><i>2</i>
+     <br>Repeat one. Supported only with Foobar. 
+   </ul>
+ <li>~shuffle
+  <br>Shuffle mode
+   <br><b>Parameters:</b> 
+   <ul>
+    <li><i>no parameters</i>
+     <br>Show shuffle status. Not supported in Foobar.
+    <li><i>1</i>
+     <br>Enable Shuffle
+    <li><i>0</i>
+     <br>Disable Shuffle
+   </ul>
+ <li>~pan. Not supported in Foobar.
+  <br>Balance of the left and right channel
+   <br><b>Parameters:</b> 
+   <ul>
+    <li><i>Number</i>
+     <br>To set given balance. 
+   </ul>
+</ul>
+<h4>Aliases, working only with BSPLayer:</h4> 
+<ul>
+ <li>~zoom
+  <br>To set given scale of the movie
+   <br><b>Parameters:</b> 
+   <ul>
+    <li><i>50</i>
+     <br>50 % from the real size of film 
+    <li><i>100</i>
+     <br>Real movie size
+    <li><i>200</i>
+     <br>Double movie size
+   </ul>
+</ul>
+ <h3>Features:</h3>
+ <ul>
+  <li>When used together with tar_media, tar_amp should be placed above tar_media,
+  otherwise many command will be executed incorrectly. tar_winamp is not useful
+  when tar_amp installed, it is a good idea to complete delete it.
+  <li>You should disable <em>Multimedia key support</em> and <em>Global hotkeys</em>
+  in all players when use tar_amp together with tar_hotkey, otherwise it can result
+  in double executing all operations (for example, button "previous track" will
+  be clicked twice).
+  <li>When plugins like GapKiller (remove silence between tracks) or Crossfader
+  (smooth track switch) used, it will be some strange effects when using ~pos, ~list,
+  ~prev, ~next commands. It's not a bug, but players' feature!
+  <li>Tested only on <em>FooBar 0.8.3</em> and <em>Apollo 37zg</em>.
+ </ul>
+
+ <b><font size=+1 color=blue>History:</font></b>
+ <br><font color=green>[+]</font>&nbsp;New feature
+ <br><font color=blue>[*]</font>&nbsp;Fixed bug
+ <br><font color=red>[-]</font>&nbsp;Removed feature
+ 
+ <p><font size=+1 color=blue>Version 1.0 - 02.07.05</font>
+ <br><font color=green>[+]</font>&nbsp;tar_media plugin was modified again.
+ Now, it was divided into two plugins: tar_amp (this) and tar_misc. This plugin
+ intended only for players' control.
+ <br><font color=blue>[*]</font>&nbsp;Error on Winamp's playlist reposition with repeat disabled
+
+ <p><font size=+1 color=blue>Version 1.01 - 27.07.05</font>
+ <br><font color=blue>[*]</font>&nbsp;FooBar control doesn't work when window was minimized
+
+ <p><font size=+1 color=blue>Version 1.01 - 27.07.05</font>
+ <br><font color=green>[+]</font>&nbsp;Absolutelly new technology of operation with the FooBar's window. Now most functions are supported for FooBar too! I thank DRON from www.delphikingdom.ru for the valuable information used when I wrote this plugin.
+ <br><font color=red>[-]</font>&nbsp;Because of Apollo's API is compatible with Winamp's API, the separate support of the window Apollo has been removed. Now everything, that Winamp can, Apollo can do too.
+</body>
+</html>  
+
+

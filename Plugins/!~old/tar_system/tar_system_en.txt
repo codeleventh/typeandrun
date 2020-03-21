@@ -1,0 +1,115 @@
+Name: System functions plugin for TypeAndRun.
+Version: 1.81
+Author: -=GaLaN=- (Evgeniy Galantsev)
+
+Description:
+Contains the functionality extending aliases.
+
+Available aliases:
+
+~cdeject [[action1][drive1]] [[action2][drive2]] ...
+CD drives operating.
+action - the action performed with a drive. "*" or blank - change state. "+" - open CD. "-" or "/" - close CD. All actions are typed without quotation marks.
+drive - the drive on which an action is performed. If blank, the 1st found drive is used.
+
+Example:
+~cdeject				change state of the 1st CD drive
+~cdeject *				change state of the 1st CD drive
+~cdeject +				open the 1st found CD drive
+~cdeject /				close the 1st found CD drive
+~cdeject -				close the 1st found CD drive
+~cdeject f				change state of the F drive:
+~cdeject *f				change state of the F drive:
+~cdeject +g				open G drive:
+~cdeject /h				close H drive:
+~cdeject -i				close I drive:
+~cdeject e e			change F drive state, then resume it.
+~cdeject *e *e			change state of E:, then resume
+~cdeject +g h			open G drive, then open H:
+~cdeject +e -f g /h		open E: , close F:, change state of G:, close H:
+~cdeject + - + - + -	        Try it =)
+
+Couple of words about changing state of a drive. The main bug of the algorythm (to be more precise - the bug of the operating system) is that 2 different states - "drive opened" and "drive closed but empty" - are treated as 1. Thus, when the automatic state detection is used, the command may not work properly. To fix this, the following algorythm was used: after you run the alias (in the autodetection mode) the plugin will try to understand which action you want to perform (open or close), then make it. If in the next 10 seconds you run the alias one more time, the plugin will think that the result didn't satisfy you (or there was no result at all - since there might have been the command to open the already opened drive) and perform the opposite action. 
+
+The algorythm and the principle of this alias are almost totally taken from the program "CDEject", created by Tir Na Nog <tirna@narod.ru>, at http://tirna.narod.ru/soft/cdeject.htm
+
+~control [applet_name]
+Opens a Control Panel applet.
+applet_name - an applet's name (without .cpl). An applet's name is automatically completed from the *.cpl files list in all %PATH% directories.
+
+~emptyrecyclebin
+Empties the RecycleBin.
+
+~hibernate [force]
+Saves all memory to the HDD, and switches the PC off, saving the work environment. If "force" parameter is used, switching off goes more quickly. It works only under NT5.
+
+~killprocess [process_name_exe]
+Kills all processes with the name given. The name of a process is autocompleted from system process list.
+
+~lock
+Blocks a workstation (the same as pressing Win+L in NT5). Works only under NT.
+
+~logoff [force]
+Closes all applications and allows to change the user. If "force" parameter is used, applications will be closed coercively (in case of NT) or the user will be changed without unloading running applications (Win9x).
+
+~poweroff [force]
+Closes all applications, the operating system and switches off the PC (in case of ATX support). If "force" parameter is used, applications will be unloaded coercively. 
+
+~reboot [force]
+Closes all applications, the operating system and reboots the computer. If "force" parameter is used, applications will be unloaded coercively. 
+
+~resolution width,height[,[bits][,frequency]]
+Changes the monitor's resolution. 
+
+width and height (required parameters) - the width and heigth of the monitor (in pixels) to switch the resolution to.
+
+bits (optional parameter) - indicates the number of bits per point (8, 16, 24, 32), otherwise, the system defaults are used.
+
+frequency (optional perameter) - indicates the frame scan size, otherwise the lowest value is used.
+Examples:
+~resolution 800,600,32,100	switches resolution to 800õ600õ32 and frame scan to 100.
+~resolution 1024,768,16		switches resolution to 1024õ768õ16.
+~resolution 1280,1024,75	switches resolution to 1280õ1024 and frame scan to 75.
+
+~shutdown [force]
+Closes all applications and the operating system. If "force" parameter is used, applications will be unloaded forcely. Modern "smart" motherboards do switch off power.
+
+history:
+[+] new feature
+[*] bug fixed
+[-] removed feature
+
+version 1.0 - 27 oct 03
+[+] the first plugin version
+
+version 1.1 - 12 nov 03
+[+] "~lock" command added - locks the workstation.
+
+Version 1.2 - 23 nov 03
+[+] "~resolution" command added - changes resolutions.
+
+version 1.3 - 28 nov 03
+[+] "~cdeject"command added - operating with CD drives.
+
+version 1.4 - 22 jan 04
+[+] "~emptyrecyclebin" command added - empties the recycle bin.
+
+version 1.5 - 23 jan 04
+[+] "~hibernate" command added - allows to hibernate the computer.
+
+version 1.6 - 05 dec 04
+[*] Some small corrections
+
+version 1.7 - 07 dec 04
+[+] "~killprocess" command added - terminating processes.
+
+version 1.8 - 04 feb 05
+[+] "~control" command added - opening Control Panel's applets.
+
+version 1.81 - 19.02.05
+[*] ~killprocess bug fixed - because of the previous fixing the process list didnt autocomplete
+
+==========================================================
+---------------------------------¬
+translated from Rus to Eng
+by Paul Kiss <pk280181@yandex.ru>

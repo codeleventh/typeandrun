@@ -1,0 +1,150 @@
+VXM9 (Paule Volodin) <vxm9@mail.ru>
+4.0.2
+
+Erreur!
+Nettoyer l`histoire:
+inscriptions. Attention - on ne peut pas supprimer!
+On ne peut pas utiliser la touche chaude! Utilisez l'icone dans le panneau des taches pour la changer...
+L'erreur! Le pseudonyme ou son action n'est pas indique!
+Tous les fichiers
+Choisir le fichier...
+Indiquez le directoire :
+
+Sur la programme %p %v...
+Visiter le site officiel du programme %p %v...
+Contactez moi par E-mail ¹1...
+Contactez moi par E-mail ¹2...
+Fermer
+
+Du reglage
+l'Image
+l'Aspect
+Les couleurs
+Les caracteres
+La touche chaude
+L'autocomplement
+L'execution
+L'histoire
+Les voies
+Le Registre
+Config
+La langue
+La reglage de la suppression. 
+Le redacteur de config
+OK
+Annuler
+Appliquer
+Montrer la fenetre du programme a la mise en marche
+Cacher la fenetre du programme par la pression de Enter
+Cacher la fenetre du programme a la pression reiterative de la touche chaude.
+Montrer l'icone dans le panneau des taches 
+Montrer seulement le cadre (travaille seulement a Windows 2000 ou plus nouveau)
+La transparence de la fenetre du programme:
+Cacher la fenetre du programme, s'il n'y a pas d'activite plus que (dans les millisecondes):
+La priorite:
+-1 - Bas
+0 - Normal
+1 - Haut
+2 - Dans le temps reel
+Montrer au centre selon X
+Montrer au centre selon Y
+La largeur de la fenetre:
+La hauteur de la fenetre:
+La largeur du cadre:
+La couleur du texte:
+La couleur de la fenetre du programme:
+La couleur du cadre. 
+Remplacer les caracteres...
+Ne pas utiliser l'autocomplement
+Utiliser l'autocomplement standard.
+Utiliser le complement comme en Linux BASH (a la pression Tab). 
+Utiliser l'autocomplement pour les commandements interieures
+Utiliser l'autocomplement pour les pseudonymes
+Utiliser l'autocomplement pour les pseudonymes systemique
+Utiliser l'autocomplement pour path browser 
+Utiliser l'autocomplement pour l'histoire
+La sensibilite au registre (qwerty <> QWERTY)
+Ajouter un espace a le pseudonyme
+Executer les commandements interieures
+Executer les pseudonymes
+Executer les pseudonymes systemique
+Ouvrir les references
+Ouvrir les adresses de E-mail
+Ouvrir les classeurs
+Lancer les directories. 
+Lancer tout le reste
+Ne pas garder l'histoire au fichier
+Garder l'histoire au fichier
+Garder les commandements interieures
+Garder les parametres des commandements interieures
+Garder les pseudonymes
+Garder les parametres de les pseudonymes
+Garder les pseudonymes systemique
+Garder les parametres de les pseudonymes systemique
+Garder les references
+Garder les adresses du E-mail.
+Garder les directories
+Garder tout autre ou inconnu.
+Le dimension maximum de l'histoire dans les lignes (0 - illimite)
+Votre Internet programme: 
+Votre fichier-manager (par exemple : explorer.exe) :
+Votre programme de la ligne commande (par exemple : command.com) :
+Les parametres pur la programme de la ligne commande selon la pression Enter:
+Les parametres pur la programme de la ligne commande selon la pression Shift+Enter:
+Ne pas lancer avec Windows
+HKLM - pour tous les utilisateurs
+HKCU - pour l'utilisateur courant
+Ajouter le point "Add to %p..." dans le menu selon la touche droite dans votre fichier-manager
+Deplacer les pseudonymes lance au haut
+Le tri automatique de la liste par les pseudonymes
+Automatiquement relire la liste dans tous les (dans les millisecondes):
+Relire Config.ini a chaque appel de la console.
+Le choix de la langue:
+Auteur:
+Version:
+Utiliser la fonction de la suppression
+Le pseudonyme:
+Action:
+Les parametres:
+Directoire de travail:
+L'etat de la fenetre:
+Ajouter a l'histoire?
+Deplacer cet pseudonyme au haut?
+Priorite:
+Nouveau pseudonyme(&N)
+Enlever cet pseudonyme(&D)
+0 - Cache
+1 - normal
+2 - roule
+3 - deroule
+4 - normal sans tour
+5 - roule sans tour
+0 - Comme en reglage
+1 - Toujours. 
+2 - jamais
+0 - Comme en reglage
+1 - Toujours
+2 - Jamais
+-1 - Bas
+0 - Normal
+1 - haut
+2 - Dans le temps reel
+
+%p %v
+Montrer la fenetre du programme
+Cacher la fenetre du programme
+Decouper
+Copier
+Inserer
+Nettoyer
+Choisir tout
+Suppresser
+Creer un pseudonyme...
+Enlever la ligne
+Relire Config.ini
+L'autocomplement -Oui/Non.
+Du reglage...
+Le Redacteur de Config...
+L'Aide
+Sur le programme %p...
+La sortie :-<

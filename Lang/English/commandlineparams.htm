@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>Command line parameters</title>
+</head>
+<body style="font-family: MS Sans Serif; font-size: 10pt; text-align: justify;">
+
+<span style="font-family: Helvetica, Arial; font-size: 12pt; width: 100%; background-color: #8CB9FD; padding: 2px 2px 2px 2px;"><b>Command line parameters</b></span><br>
+
+<p><b>Usage:</b></p>
+<p style="font-family:Courier New; font-size:9pt;">
+
+<span style="color:#FF0000">TypeAndRun.exe</span><span style="color:#000000">&nbsp;[</span><span style="color:#007F00">--settings=path</span><span style="color:#000000">]&nbsp;[</span><span style="color:#007F00">--config=path</span><span style="color:#000000">]&nbsp;[</span><span style="color:#007F00">--configold=path</span><span style="color:#000000">]&nbsp;[<span style="color:#007F00">--history=path</span><span style="color:#000000">]&nbsp;[<span style="color:#007F00">--plugins=path</span><span style="color:#000000">]&nbsp;[<span style="color:#007F00">--add=path</span><span style="color:#000000">]&nbsp;[<span style="color:#007F00">--exec=string</span><span style="color:#000000">]</span></p>
+
+<p><b>Where:</b></p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--settings=path</span> - specify file with settings. If no --settings parameter given than TypeAndRun uses TypeAndRun.ini from the TypeAndRun folder. Path - full path to the *.ini file. If only name given then using TypeAndRun folder as a path to the file. Parameter ignores if TypeAndRun already runs.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--config=path</span> - specify file with config of aliases. If no --config parameter given then TypeAndRun uses Config.ini from the TypeAndRun folder. Path - full path to the *.ini file. If only name given then using TypeAndRun folder as a path to the file. Parameter ignores if TypeAndRun already runs.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--configold=path</span> - specify file with config of dead aliases. If no --configold parameter given then TypeAndRun uses file from the TypeAndRun folder with the same name (with '~' prefix). Path - full path to the *.ini file. If only name given then using TypeAndRun folder as a path to the file. Parameter ignores if TypeAndRun already runs.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--history=path</span> - specify history file. If no --history parameter given then TypeAndRun uses file History.ini from the TypeAndRun folder. Path - full path to the *.ini file. If only name given then using TypeAndRun folder as a path to the file. Parameter ignores if TypeAndRun already runs.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--plugins=path</span> - specify file with plugins settings. If no --plugins parameter given then TypeAndRun uses file Plugins.ini from the TypeAndRun folder. Path - full path to the *.ini file. If only name given then using TypeAndRun folder as a path to the file. Parameter ignores if TypeAndRun already runs.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--add=path</span> - adds alias to the config. If no --add parameter given then no aliases than aliases not adds. Path - full path to the file or folder. If no Path parameter given, than aliases not adds. Parameter works even TypeAndRun already runs.</p>
+
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--exec=string</span> - run string "string" via console.</p>
+	
+<p><span style="font-family:Courier New; font-size:9pt; color:#007F00">--multiusers=[1\0]</span> - указывает программе, в каком режиме работать с конфигами. Если указать 0, то будут использоваться конфиги из директории TypeAndRun. Если 1, то используются конфиги из директории %APPDATA%\TypeAndRun. Если же параметр --multiusers не указан, то используются настройки TypeAndRun из реестра.</p>
+
+<p>If path or string contains spaces than you should type braces around it.</p>
+<p>You can specify parameters in any order.</p>
+<p>Warning! Incorrect usage of parameters may cause errors in config or even losing configs! Save you *.ini files before experiments with command line switches. </p>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>Примеры полезных алиасов</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=windows-1251">
+</head>
+<body style="font-family: MS Sans Serif; font-size: 10pt; text-align: justify;">
+
+<span style="font-family: Helvetica, Arial; font-size: 12pt; width: 100%; background-color: #8CB9FD; padding: 2px 2px 2px 2px;"><b>Примеры полезных алиасов</b></span><br>
+
+<p style="font-family:Helvetica,Arial;"><b>1) Быстрый запрос на поисковые машины</b></p>
+Для использования наберите в консоли "%alias% слово".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+yandex|http://ya.ru/yandsearch?text=%s<br>
+ya|http://ya.ru/yandsearch?text=%s<br>
+google|http://www.google.ru/search?q=%s&amp;hl=ru<br>
+rambler|http://search.rambler.ru/cgi-bin/rambler_search?words=%s&amp;where=1<br>
+aport|http://sm.aport.ru/scripts/template.dll?r=%s&amp;That=std<br>
+lycos|http://poisk.lycos.ru/cgi-bin/pursuit?query=%s&amp;cat=loc&amp;who=ru&amp;x=26&amp;y=10<br>
+</span>
+<br>
+Получить информацию сервиса RIPE whois:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+RIPE|http://ripe.net/perl/whois?form_type=simple&full_query_string=&searchtext=%s<br>
+</span>
+<br>
+Искать FTP:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+FTP_search|www.filesearch.ru/cgi-bin/s?q=%s&t=f&d=&x=14&y=15<br>
+</span>
+<br>
+Искать по библиотеке Мошкова:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+Moshkov|www.lib.ru/TitleSearch?Search=%s<br>
+</span>
+<br>
+Искать на портале iXBT hardware:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+ixbt_serch|http://rose.ixbt.com/cgi-bin/search.cgi?q=%s<br>
+</span>
+
+<p style="font-family:Helvetica,Arial;"><b>2) Быстрый запрос перевода страницы</b></p>
+Russian to English. Для использования наберите в консоли "ruen адрес".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+ruen|http://www.translate.ru/url/tran_url.asp?lang=ru&amp;url=%s&amp;direction=re&amp;template=General&amp;cp1=NO&amp;cp2=NO&amp;autotranslate=on&amp;transliterate=on&amp;psubmit2.x=50&amp;psubmit2.y=12<br>
+</span>
+<br>
+English to Russian. Для использования наберите в консоли "enru адрес".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+enru|http://www.translate.ru/url/tran_url.asp?lang=ru&amp;url=%s&amp;direction=er&amp;template=General&amp;cp1=NO&amp;cp2=NO&amp;autotranslate=on&amp;transliterate=on&amp;psubmit2.x=50&amp;psubmit2.y=12<br>
+</span>
+<br>
+WorldLingo Translate - Chinese Simplified to English.<br>
+Для использования наберите в консоли "chen адрес".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+chen|http://www.worldlingo.com/wl/mstranslate/UP26384/T1/P2/l/microsoft/computer_translation.html?wl_lp=ZH_CN-EN&amp;wl_fl=0&amp;wl_rurl=http%3A%2F%2F%s%2F&amp;wl_url=%s&amp;wlg_table=-3<br>
+</span>
+<br>
+Найти акроним (наиболее часто используемые аббревиатуры, например RTFM):<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+acronymfinder|http://www.acronymfinder.com/af-query.asp?String=exact&Acronym=%1<br>
+</span>
+<br>
+Искать значение слова на urbandictionary.com (словарь сленга, акронимы и так далее):<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+urbandictionary|http://www.urbandictionary.com/define.php?term=%s<br>
+</span>
+<br>
+
+<p style="font-family:Helvetica,Arial;"><b>3) Быстрый запрос перевода слова</b></p>
+Rambler Dictionary - перевод слова.<br>
+Для использования наберите в консоли "eng2rus word"<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+eng2rus|http://www.rambler.ru/dict/scripts/relay-enru.cgi?query=%s&amp;where=enru&amp;start=0&amp;count=15<br>
+</span>
+Для использования наберите в консоли "rus2eng слово"<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+rus2eng|http://www.rambler.ru/dict/scripts/relay-ruen.cgi?query=%s&amp;where=ruen&amp;start=0&amp;count=15<br>
+</span>
+<br>
+Информационно-энциклопедический проект компании {«Русс портал»}.<br>
+Для использования наберите в консоли "? слово".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+?|http://www.rubricon.com/qe.asp?qtype=1&amp;id=0&amp;srubr=0&amp;fstring=%s<br>
+</span>
+<br>
+Переводчик Lingvo на Yandex.ru.<br>
+Наберите в консоли "translate слово" для перевода с русского на английский. Наберите в консоли "translate word" для перевода с английского на русский.<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+translate|http://lingvo.yandex.ru/cgi-bin/lingvo.pl?text=%s<br>
+</span>
+
+<p style="font-family:Helvetica,Arial;"><b>4) Для веб-дизайнера.</b></p>
+W3 Schools - подробная информация о html-теге.<br>
+Для использования наберите в консоли "tag тег"<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+tag|http://www.w3schools.com/tags/tag_%s.asp?output=print<br>
+</span>
+<br>
+W3 Schools - проверка сайта на ошибки:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+validator_html|http://validator.w3.org/check?uri=http%3A%2F%2F%s<br>
+validator_css|http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2F%s&usermedium=all<br>
+</span>
+
+<p style="font-family:Helvetica,Arial;"><b>5) Набор адресов интернета без www. и http://</b></p>
+Данный алиас избавляет от потребности писать http:// и www. После загрузки окно станет активным.<br>
+Для использования достаточно набрать "` fileforum.ru".<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+`|C:\Program&nbsp;Files\Internet&nbsp;Explorer\IEXPLORE.EXE<br>
+</span>
+<br>
+Этот алиас выполняет ту же функцию, но окно после загрузки не станет активным. Удобно, если по аське прислали урл и надо открыть его, не отрываясь от просмотра текущего сайта.<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+``|C:\Program&nbsp;Files\Internet&nbsp;Explorer\IEXPLORE.EXE|||5<br>
+</span>
+<br>
+Соответственно, браузер в этих алиасах можно указать любой.
+
+<p style="font-family:Helvetica,Arial;"><b>5) Открытие системных папок</b></p>
+Проблема в том, что не получается использовать алиасы типа:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+my_documents|explorer.exe|My&nbsp;Documents<br>
+</span>
+<br>
+Это происходит потому, что системные папки windows определяются не именами (из-за локализации на различные языки), а уникальными номерами. Вот правильные алисы для доступа к системным папкам:<br>
+<span style="font-family:Courier New; font-size:9pt; color:#7F7F7F">
+my_computer|explorer|::{20D04FE0-3AEA-1069-A2D8-08002B30309D}<br>
+my_network_places|explorer|::{208D2C60-3AEA-1069-A2D7-08002B30309D}<br>
+my_documents|explorer|::{450D8FBA-AD25-11D0-98A8-0800361B1103}<br>
+recycle_bin|explorer|::{645FF040-5081-101B-9F08-00AA002F954E}<br>
+printers_and_faxes|explorer|::{2227A280-3AEA-1069-A2DE-08002B30309D}<br>
+network_connections|explorer|::{7007ACC7-3202-11D1-AAD2-00805FC1270E}<br>
+sheduled_tasks|explorer|::{D6277990-4C6A-11CF-8D87-00AA0060F5BF}<br>
+</span>
+
+</body>
+</html>

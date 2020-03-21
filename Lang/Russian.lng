@@ -1,0 +1,266 @@
+author = -=GaLaN=- (Evgeniy Galanstev)
+version = 4.7b6
+
+
+error = Ошибка!
+clearhistory = Очистить историю:
+clearhistory2 = записей. Осторожно - нельзя отменить! [&C]
+cannotusehotkey = Невозможно использовать горячую клавишу! Используйте иконку в панели задач, чтобы её изменить...
+erroraliasname = Ошибка! Не указано имя алиаса или его действие!
+allfiles = Все файлы
+exefiles = Запускаемые файлы
+wavfiles = Звуковые файлы
+selectfile = Выбрать файл...
+selectdirectory = Укажите директорию:
+deletethisalias = Удалить этот алиас?
+replacepath = Заменить в этом алиасе путь?
+decheckcomplete = Проверка на мертвые алиасы завершена!
+checkingalias = Проверяется алиас:
+generationfilelist = Генерируется список файлов...
+statusloaded = Статус: загружен
+statusunloaded = Статус: не загружен
+plugins = Плагины
+badplugin = Это не плагин %p %v!
+
+
+aboutprogram = О программе %p %v...
+visitoffsite = Посетить официальный сайт программы %p %v...
+mailme1 = Связаться со мной по электронной почте №1...
+mailme2 = Связаться со мной по электронной почте №2...
+close = Закрыть
+
+
+settings = Настройки
+settingsappearance = Отображение
+settingsconsolelook = Вид
+settingshintpopup = Подсказка
+settingsdropdownlist = Выпадающий список
+settingscolors = Цвета
+settingsfont = Шрифт
+settingshotkey = Горячая клавиша
+settingseasytype = Автодополнение
+settingsexec = Запуск
+settingshistory = История
+settingspath = Пути
+settingsregistry = Реестр
+settingslanguage = Язык
+settingsundo = Настройки отмены
+settingssounds = Звуки
+settingsconfig = Конфиг
+settingseditconfig = Редактор конфига
+settingsplugins = Плагины
+
+ok = OK
+cancel = Отмена
+apply = Применить
+
+showconsoleonstart = Показывать окно программы при запуске
+closeafterenter = Скрывать окно программы по нажатию Enter
+hideconsoletrigger = Скрывать окно программы при повторном нажатии горячей клавиши
+systemtrayicon = Показывать иконку в системном лотке
+showballontips = Выводить сообщения в подсказке системного лотка (только ME и >=NT5)
+putmouseintoconsole = Помещать курсор мышки в окно консоли при каждом ее вызове
+autohideconsole = Автоскрытие окна программы через (в миллисекундах):
+prioriincantatem = Приоритет:
+priorilow = -1 - Низкий
+priorinormal = 0 - Нормальный
+priorihigh = 1 - Высокий
+priorirealtime = 2 - В реальном времени
+
+showcenterx = Показывать в центре по X
+showcentery = Показывать в центре по Y
+consolewidth = Ширина окна:
+consoleheight = Высота окна:
+consolewidthpercent = (в процентах от ширины экрана)
+bordersize = Ширина рамки:
+showonlyborder = Показывать только рамку (только >=NT5)
+transparent = Прозрачность окна программы (только >=NT5):
+
+showhint = Показывать информацию о набираемых алиасах и системных алиасах
+hintbordersize = Ширина рамки:
+hintborderonly = Показывать только рамку (только >=NT5)
+hinttransparent = Прозрачность окна подсказки (только >=NT5):
+aliashint = Запуск (алиас):
+sysaliashint = Запуск (системный алиас):
+
+dropdownlinenum = Число строк в выпадающем списке:
+dropdownbordersize = Ширина рамки:
+dropdownborderonly = Показывать только рамку (только >=NT5)
+dropdowntransparent = Прозрачность выпадающего списка (только >=NT5):
+
+noetcolor = Автодополнение выключено
+normaletcolor = Автодополнение включено
+linuxcolor = Как в BASH
+fontcolor = Цвет текста:
+consolecolor = Цвет окна программы:
+bordercolor = Цвет рамки:
+hinttextcolor = Цвет текста подсказки:
+hintcolor = Цвет фона подсказки:
+dropdowntextcolor = Цвет текста выпадающего списка:
+dropdowncolor = Цвет фона выпадающего списка:
+
+changefont = Сменить шрифт...
+fontautosize = Автоматически подгонять размер шрифта под высоту окна
+textalign = Выравнивание текста:
+alignleft = По левому краю
+aligncenter = По центру
+alignright = По правому краю
+applyenglish = Включать английскую раскладку при каждом вызове консоли
+lockenglish = Запретить изменять раскладку клавиатуры в консоли
+
+hotkeyalt = &Alt
+hotkeyctrl = &Ctrl
+hotkeyshift = &Shift
+hotkeywin = &Win
+
+noet = Не использовать автодополнение
+standartet = Использовать стандартное автодополнение
+linuxt = Использовать дополнение как в BASH (по нажатии Tab)
+etinternal = Использовать автодополнение для внутренних команд
+etalias = Использовать автодополнение для алиасов
+etsysalias = Использовать автодополнение для системных алиасов
+etpath = Использовать автодополнение для браузера путей
+etplugin = Использовать автодополнение для плагинов
+ethistory = Использовать автодополнение для истории
+addspace = Добавлять пробел к имени алиаса
+casesensitivity = Чувствительность к регистру (фыва <> ФЫВА)
+applyet = Включать стандартное автодополнение при каждом вызове консоли
+advancedbackspace = Использовать продвинутую обработку нажатий BackSpace
+advancedspace = Использовать продвинутую обработку нажатий Space
+deleteduplicates = Удалять дубликаты из списка автодополнения
+
+runinternal = Запускать внутренние команды
+runalias = Запускать алиасы
+usedefaultaction = ... с действием шелла по умолчанию
+runsysalias = Запускать системные алиасы
+runwww = Открывать ссылки
+runemail = Открывать адреса электронной почты
+runfolder = Открывать папки
+runfile = Запускать файлы
+runplugin = Запускать плагины
+runother = Запускать команды оболочки (все остальное)
+
+nohistory = Не сохранять историю в файл
+hisfile = Cохранять историю в файл
+hisinternal = Cохранять внутренние команды
+hisinternalparam = ... с параметрами
+hisalias = Cохранять алиасы
+hisaliasparam = ... с параметрами
+hissysalias = Cохранять системные алиасы
+hissysaliasparam = ... с параметрами
+hiswww = Cохранять ссылки
+hisemail = Cохранять адреса электронной почты
+hisfolder = Cохранять папки
+hisplugin = Сохранять плагины
+hispluginparam = ... с параметрами
+hisother = Cохранять команды оболочки (все остальные или неизвестные)
+hiscommandline = Сохранять строки, переданные через командную строку (--exec=строка)
+hismessage = Сохранять строки, переданные через сообщение WM_COPYDATA окну консоли
+invertscroll = Инвертировать прокрутку истории
+maxhistorysize = Максимальный размер истории в строках (0 - неограниченный):
+
+yourbrowser = Ваш интернет браузер:
+yourfm = Ваш файл-менеджер (например: explorer.exe):
+yourshell = Ваш обработчик командной строки (например: command.com):
+enterparam = Параметры, передаваемые обработчику командной строки по нажатию Enter:
+shiftenterparam = Параметры, передаваемые обработчику командной строки по нажатию Shift+Enter:
+
+noautostart = Не запускать вместе с Windows
+starthklm = HKLM - для всех пользователей
+starthkcu = HKCU - для текущего пользователя
+shellintegration = Добавить пункт "Add to %p..." в меню по правой клавише в Проводнике
+multiusers = Использовать свои конфиги для каждого пользователя системы (только NT) *
+murequirerestart = * требуется перегрузить %p
+
+useundo = Использовать функцию отмены
+
+enablesounds = Включить звуки в программе
+browsesound = Обзор
+soundexecinternal = Запуск внутренней команды
+soundexecalias = Запуск алиаса
+soundexecsysalias = Запуск системного алиаса
+soundexecurl = Запуск ссылки
+soundexecemail = Запуск адреса электронной почты
+soundexecfolder = Запуск папки
+soundexecfile = Запуск файла
+soundexecplugin = Запуск плагина
+soundexecallother = Запуск всего остального
+
+delectlang = Выбор языка:
+authorlang = Автор:
+versionlang = Версия:
+
+moveupalias = Двигать запускаемые алиасы в верх конфига
+autosortconfig = Автоматическая сортировка конфига по имени алиаса
+autoreread = Автоматом перечитывать конфиг и системные алиасы каждые (в мсек):
+rereadhotkey = Перечитывать конфиг и системные алиасы при каждом вызове консоли
+createdabackup = Создавать файл ~Config.ini, содержащий удаленные мертвые алиасы?
+confirmkillda = Запрашивать подтверждение на удаление мертвого алиаса
+searchdadisk = Искать файл на всех дисках
+searchdaplugin = Искать алиас в подключенных плагинах
+searchdaonstart = Делать проверку на мертвые алиасы с каждым запуском %p
+searchdanow = Проверить на мертвые алиасы [&C]
+backallda = Вернуть все в конфиг [&B]
+
+aliasname = Имя алиаса:
+aliasaction = Действие:
+aliasparam = Параметры:
+aliaspath = Текущая папка:
+aliasstate = Состояние окна:
+aliasaddhistory = Добавлять в историю?
+aliasmoveup = Двигать алиасы в верх конфига?
+aliasprioriincantatem = Приоритет:
+aliascomment = Комментарий:
+newalias = Новый алиас [&N]
+deletealias = Удалить алиас [&D]
+statehide = 0 - Скрытно
+statenormal = 1 - Нормально
+stateminimize = 2 - Свернуто
+statemaximize = 3 - Распахнуто
+statenormalnofocus = 4 - Нормально без фокуса
+stateminimizenofocus = 5 - Свернуто без фокуса
+addhisdefault = 0 - Как в настройках
+addhisalways = 1 - Всегда
+addhisnever = 2 - Никогда
+moveupdefault = 0 - Как в настройках
+moveupalways = 1 - Всегда
+moveupnever = 2 - Никогда
+aliaspriorilow = -1 - Низкий
+aliaspriorynormal = 0 - Нормальный
+aliaspriorihigh = 1 - Высокий
+aliaspriorirealtime = 2 - В реальном времени
+
+pluginname = Имя:
+pluginversion = Версия:
+plugindesc = Описание:
+pluginauthor = Автор:
+plugincopyright = Права:
+pluginsite = Сайт:
+pluginpath = Путь:
+addplugin = Добавить плагин... [&A]
+deleteplugin = Удалить плагин [&D]
+loadplugin = Загрузить плагин [&L]
+unloadplugin = Выгрузить плагин [&L]
+loadpluginonstart = Загружать плагин при старте %p
+savehistoryplugin = Сохранять историю для этого плагина
+
+
+systemtrayhint = %p %v
+consoleshow = Показать окно программы
+consolehide = Скрыть окно программы
+consolecut = Вырезать
+consolecopy = Копировать
+consolepaste = Вставить
+consoleclear = Очистить
+consoleselectall = Выделить все
+consoleundo = Отмена
+consolenewalias = Создать алиас...
+consoledeletestring = Удалить строку
+consoleopenfolder = Открыть папку алиаса
+consolerereadconfig = Перечитать конфиг
+consoleonoffet = Вкл\Выкл автодополнение
+consolesettings = Настройки...
+consoleconfigeditor = Редактор конфига...
+consolehelp = Помощь
+consoleaboutprogram = О программе %p...
+consoleexit = Выход

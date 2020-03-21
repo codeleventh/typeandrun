@@ -1,0 +1,101 @@
+Name: Math plugin for TypeAndRun.
+Version: 1.6
+Author: -=GaLaN=- (Evgeniy Galantsev)
+
+Description:
+Allows to make calculations of any commplexity directly in the program's console.
+
+Example:
+(2+2)*2=<ENTER>
+Text appearing in the console:
+(2+2)*2=8
+The answer will be selected and copied (optional) to the clipboard; you can delete/correct the expression etc.
+
+Hints:
+- plugin is not case-sensitive
+- blanks in expressions allowed
+- the decimal part must be separated by dot (not comma)
+- expression must be written accodring to the common rules of writing math expression on a PC. For instance: x^2+sin(5*y)/exp(4*z) 
+- plugin sets the following priority for math operations (in the descending order): functions, exponentiation, multiplication and division, addition and substraction;
+- plugin considers parenthesis ( i.e. '(' and ')' )
+- plugin knows the following operations:
+	+ : addition
+	- : substraction
+	/ : division
+	* : multiplication
+	^ : exponentiation
+- plugin knows the following functions:
+	sin - sine
+	cos - cosine
+	tan - tangent
+	cot - cotangent
+	exp - exponent
+	ln - natural logarithm
+	sqr - square
+	sqrt - square root
+	round - rounding numbers
+	trunc   - truncation
+	asin    - arcsine
+	acos    - arc cosine
+	atan    - arc tangent
+	acot    - arc cotangent
+	sinh    - hyperbolic sine
+	cosh    - hyperbolic cosine
+	tanh    - hyperbolic tangent
+	coth    - hyperbolic cotangent
+- plugin knows the following numeric literals:
+	pi - pi 
+	e - e
+- plugin understands decimals only. 
+
+The plugin's settings are stored in tar_math.ini: 
+[General]
+SelectAnswer -  selection of the answer (1 is set by default)
+CopyToClipboard - copying the answer to the clipboard (1 is set by default)
+UseEqual - using '=' for recognition of an expression (1 is set by default)
+UseOriginal - using the original expression in the answer (1 is set by default)
+Round - rounding the answer (1 is set by default)
+RoundLimit - от 1 до 13. The number of chars left after the dot. (13 by default)
+
+The plugin uses the FunctionParser module. Fulfilling the wish of its author, I'm giving his licence below:
+======================================================================
+The given unit and classes and modules presented in it, as well as the function
+recognition algorythm are the intellectual propery of Shcheglov Ilia Aleksandrovich 
+<franzy@comail.ru>.
+These class, its methods and the algorythm are freely distributed for non-commercial
+use. Any other distribution of the specified information (namely --  commercial 
+distribution) is PROHIBITED. The use of the class, its methods or the algorythm
+in the commercially distrubuted programs is allowed only by the written permission 
+of the author. 
+======================================================================
+Thanks a lot to Ilia for such a great algorythm; I hope nothing in his licence has been violated. ;)
+
+History:
+[+] New feature
+[*] Bug fixed
+[-] Removed feature
+
+Version 1.0 - 27.10.03
+[+] The first version of the plugin
+
+Version 1.1 - 13.11.03
+[-] removed the limit in expressions (not more than 255 symbols)
+
+Версия 1.2 - 23.11.03
+[*] fixed bug with lame output of fractional results
+
+Версия 1.3 - 20.01.04
+[*] the whole expression was put into the clipboard, not the needed answer only
+[+] optional use of '=' in expressions
+[+] optional display of the original expression (it still remains in the history) in the answer
+[*] although only dot must be used in expressions, answers contained comma
+
+Версия 1.4 - 05.12.04
+[*] some minor fixes
+[*] 'save config on exit' removed -- no need in this option since the config is edited manually
+
+Версия 1.5 - 07.12.04
+[*] while making previous fixes I made a bug. Now it's fixed :)
+
+Версия 1.6 - 02.01.05
+[+] option of rounding the asnwer till the fixed number after the comma, not more than 13, though. Unfortunately, it's impossible to make it more precise.

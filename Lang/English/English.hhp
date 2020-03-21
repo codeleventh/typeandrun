@@ -1,0 +1,31 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=..\English.chm
+Contents file=English.hhc
+Default topic=aboutprogram.htm
+Display compile progress=Yes
+Error log file=English.log
+Full-text search=Yes
+Index file=English.hhk
+Language=0x409 English (United States)
+Title=TypeAndRun english help
+
+
+[FILES]
+aboutprogram.htm
+backaddress.htm
+createaliases.htm
+distrcontext.htm
+faq.htm
+historycreated.htm
+hotkeys.htm
+runaliases.htm
+samples.htm
+senks.htm
+shareware.htm
+systemperfomance.htm
+working.htm
+commandlineparams.htm
+
+[INFOTYPES]
+

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>Alias description ~ListGen</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+ <h3>~ListGen</h3>
+ <h4>Description:</h4>
+ The program is intended for creation of lists of files of the computer (similarly
+ to command dir from DOS), but allows to set the output format (that is impossible for dir).
+ <center><img src="list_en.gif"></center>
+ <ol>
+  <li>Start folder, scanning will start from it. Button to the right - to browse.
+  <li>Start scanning. During scanning changes the name to Stop. The pressing this
+  button can borrow some time, do not press the button too frequent, while there is a process
+  <li>Options - listing parameters.
+  <li>Exit from the program with saving of parameters
+  <li>Output file, listing will be written to it
+ </ol>
+ After pressing Option button, next dialog will appear:
+ <center><img src="param_en.gif"></center>
+ <ol>
+  <li>Use files - write to listing file names in special format
+  <li>File mask - OS standart mask. Files, satisfying that mask will be sent to output file
+  <li>Format line - string, containing special keys, which will be replaced with appropriate parameters:
+   <ul>
+    <li><i>%NAME</i> - name, converted to upper case
+    <li><i>%name</i> - name, converted to lower case
+    <li><i>%Name</i> - name without case conversion
+    <li><i>%DIR</i>,<i>%dir</i>,<i>%Dir</i> - same, for folders
+    <li><i>%EXT</i>,<i>%ext</i>,<i>%Ext</i> - save, for extensions
+    <li><i>%FULL</i>,<i>%full</i>,<i>%Full</i> - same, for full filename
+    <li><i>%date</i> - file creation date
+    <li><i>%time</i> - file creation time
+    <li><i>%size</i>,<i>%sizeb</i>,<i>%sizek</i>,<i>%sizem</i> - accordingly
+    file size using autoselect, in bytes, in kilobytes, in megabytes
+   </ul>
+   If you need % in output file, write it twice.
+  <li>Relative path - use path from start folder, or full path otherwise.
+  <li>Use folders - write to listing folder names in special format
+  <li>Format line - line, containing special keys, which will be replaced with appropriate parameters:
+   <ul>
+    <li><i>%Name</i>,<i>%name</i>,<i>%Name</i> - same as in file's format string: folder name.
+   </ul>
+  <li>Maximal level - how many folders' reenrance will program make.
+  <li>Accept changes (and close)
+  <li>Sort files - how to sort files in listing
+  <li>Sort folders - how to sort folders in listing (sort by date works sometimes
+  strange)
+  <li>Case sensitive sort
+  <li>Reverse sort (from large to small)
+  <li>Files first - in listing, first write file names (need for deleting, for example)
+  otherwise, folder will be first (for creating, for example).
+  <li>Short names - as in DOS (for BAT files creating, for example...)
+  <li>Decline changes (and close).
+ </ol>
+ <h4>Features:</h4>
+ <ul>
+  <li>All settings saved.
+  <li>Slowly works (in comparison with dir):-)
+ </ul>
+</body>
+</html>

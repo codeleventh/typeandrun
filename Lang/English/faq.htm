@@ -1,0 +1,200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>FAQ</title>
+	<style>
+		span.q { font-family:Courier New; font-size:10pt; color:#FF0000; }
+		span.a { font-family:Courier New; font-size:10pt; color:#007F00; }
+	</style>
+</head>
+<body style="font-family: MS Sans Serif; font-size: 10pt; text-align: justify;">
+
+<span style="font-family: Helvetica, Arial; font-size: 12pt; width: 100%; background-color: #8CB9FD; padding: 2px 2px 2px 2px;"><b>FAQ</b></span><br>
+
+
+<p style="font-family:Helvetica,Arial;">
+<span class="q"><b>Q1:&nbsp;&nbsp;</b></span><a href=faq.htm#1>I cannot execute commands like 'ping'</a><br>
+<span class="q"><b>Q2:&nbsp;&nbsp;</b></span><a href=faq.htm#2>I have created an alias in the configuration file, but it does not work</a><br>
+<span class="q"><b>Q3:&nbsp;&nbsp;</b></span><a href=faq.htm#3>How can I see a web page? I enter astalavista.box.sk, and get nothing!</a><br>
+<span class="q"><b>Q4:&nbsp;&nbsp;</b></span><a href=faq.htm#4>I hate your tray icon! How to kill it?</a><br>
+<span class="q"><b>Q5:&nbsp;&nbsp;</b></span><a href=faq.htm#5>Damn! What have I done! How can I open the Settings dialog?</a><br>
+<span class="q"><b>Q6:&nbsp;&nbsp;</b></span><a href=faq.htm#6>The program says "Can't bind hotkey! Now use system tray icon..."?</a><br>
+<span class="q"><b>Q7:&nbsp;&nbsp;</b></span><a href=faq.htm#7>My History file is full of crap! How can I clean it?</a><br>
+<span class="q"><b>Q8:&nbsp;&nbsp;</b></span><a href=faq.htm#8>Can Type&Run exec shortcuts? When this feature will be available in Type&Run?</a><br>
+<span class="q"><b>Q9:&nbsp;&nbsp;</b></span><a href=faq.htm#9>I enable plugins, but thay just don't work!</a><br>
+<span class="q"><b>Q10:&nbsp;</b></span><a href=faq.htm#10>I have translated your language\help file into Japanese, Mongolian and Khmer. Do you need these translations?</a><br>
+<span class="q"><b>Q11:&nbsp;</b></span><a href=faq.htm#11>What programming language did you use to write your program?</a><br>
+<span class="q"><b>Q12:&nbsp;</b></span><a href=faq.htm#12>I also program Delphi, could you share the source files with me?</a><br>
+<span class="q"><b>Q13:&nbsp;</b></span><a href=faq.htm#13>Well done! Good soft!</a><br>
+<span class="q"><b>Q14:&nbsp;</b></span><a href=faq.htm#14>The program takes a lot of memory!</a><br>
+<span class="q"><b>Q15:&nbsp;</b></span><a href=faq.htm#15>I want to use the console to control WinAmp. Can I do that?</a><br>
+<span class="q"><b>Q16:&nbsp;</b></span><a href=faq.htm#16>What are "system aliases"?</a><br>
+<span class="q"><b>Q17:&nbsp;</b></span><a href=faq.htm#17>Появится ли версия под linux и когда?</a><br>
+<span class="q"><b>Qn:&nbsp;&nbsp;</b></span><a href=faq.htm#n>I have not find the answer!</a>
+</p>
+
+<table border='0' style="font-size:10pt; text-align: justify;">
+	<tr>
+		<td><a name="1"></a><span class="q"><b>Q1:</b></span></td>
+		<td>I cannot execute commands like 'ping'</td>
+	</tr><tr>
+		<td><span class="a"><b>A1:</b></span></td>
+		<td>Open the Settings dialog and tick "Execute shell commands (all other)" checkbox. Please also check the command shell settings. For Windows 95, 98, Me usually command.com, for Windows NT4, 2000, XP - cmd.exe.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="2"></a><span class="q"><b>Q2:</b></span></td>
+		<td>I have created an alias in the configuration file, but it does not work</td>
+	</tr><tr>
+		<td><span class="a"><b>A2:</b></span></td>
+		<td>There can be several reasons for that:<br>
+1) Alias will not work if there is '|' symbol in it.<br>
+2) You have not updated the configuration file in the program memory. Exit TypeAndRun and start it again, or click the Reread Config option in the context menu, or enter the console and press Ctrl+R, or type '/reread'.<br>
+3) Check if there are any white spaces in alias, folder path or parameter. Try to put double quotes around the alias string in the config.ini file.<br>
+4) Bug? Mail me!</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="3"></a><span class="q"><b>Q3:</b></span></td>
+		<td>How can I see a web page? I enter astalavista.box.sk, and get nothing!</td>
+	</tr><tr>
+		<td><span class="a"><b>A3:</b></span></td>
+		<td>If the address you type does not start with "www.", then you have to type "http://" as well. Also, you have tick the "Execute URL's" checkbox in the settings.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="4"></a><span class="q"><b>Q4:</b></span></td>
+		<td>I hate your tray icon! How to kill it?</td>
+	</tr><tr>
+		<td><span class="a"><b>A4:</b></span></td>
+		<td>Open the Settings dialog and uncheck the "Show Icon in system tray" option.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="5"></a><span class="q"><b>Q5:</b></span></td>
+		<td>Damn! What have I done! How can I open the Settings dialog?</td>
+	</tr><tr>
+		<td><span class="a"><b>A5:</b></span></td>
+		<td>You get what you want! Now you have to use hot keys! :)) Or reread this help file and you will find that the right click on the console will do the work...</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="6"></a><span class="q"><b>Q6:</b></span></td>
+		<td>The program says "Can't bind hotkey! Now use system tray icon..."?</td>
+	</tr><tr>
+		<td><span class="a"><b>A6:</b></span></td>
+		<td>Hot key combination you use has conflicting settings.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="7"></a><span class="q"><b>Q7:</b></span></td>
+		<td>My History file is full of crap! How can I clean it?</td>
+	</tr><tr>
+		<td><span class="a"><b>A7:</b></span></td>
+		<td>You have the History.ini file... Simply erase it. Or click the Clear History button in the Settings Dialog. If you do not want to use the History any more, just click Don't Save History to File radio button in the Settings Dialog or check out checkboxes you do not want to use.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="8"></a><span class="q"><b>Q8:</b></span></td>
+		<td>Can Type&Run exec shortcuts? When this feature will be available in Type&Run?</td>
+	</tr><tr>
+		<td><span class="a"><b>A8:</b></span></td>
+		<td>Type&Run can execute shortcuts, you need to write path to the shortcut in "action" field of the alias. If shortcut is still not executes then you need to add some keys to you registry:<br>
+<span style="font-family:Courier New; font-size:9pt;">============&nbsp;файл&nbsp;*.reg&nbsp;===&nbsp;начало&nbsp;===================================<br>
+REGEDIT4<br><br>
+[HKEY_CLASSES_ROOT\lnkfile]<br>
+"IsShortcut"=""<br><br>
+[HKEY_CLASSES_ROOT\piffile]<br>
+"IsShortcut"=""<br>
+============&nbsp;файл&nbsp;*.reg&nbsp;===&nbsp;конец&nbsp;====================================</span><br>
+		</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="9"></a><span class="q"><b>Q9:</b></span></td>
+		<td>I enable plugins, but thay just don't work!</td>
+	</tr><tr>
+		<td><span class="a"><b>A9:</b></span></td>
+		<td>Plugins autocomplition and execution disabled by default. You need to check "Execute plugins" option for they to work. To enable autocomplition for plugin aliases you need to check "Use EasyType for plugin aliases" option.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="10"></a><span class="q"><b>Q10:</b></span></td>
+		<td>I have translated your language\help file into Japanese, Mongolian and Khmer. Do you need these translations?</td>
+	</tr><tr>
+		<td><span class="a"><b>A10:</b></span></td>
+		<td>Thanks! Sure I do! Send me an e-mail and your module will be included into the program deployment package</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="11"></a><span class="q"><b>Q11:</b></span></td>
+		<td>What programming language did you use to write your program?</td>
+	</tr><tr>
+		<td><span class="a"><b>A11:</b></span></td>
+		<td>Delphi 7 with VCL.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="12"></a><span class="q"><b>Q12:</b></span></td>
+		<td>I also programing Delphi, could you share the source files with me?</td>
+	</tr><tr>
+		<td><span class="a"><b>A12:</b></span></td>
+		<td>No. Tell me what particularly you want to know and I will send you a part of the code relating to that.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="13"></a><span class="q"><b>Q13:</b></span></td>
+		<td>Well done! Good soft!</td>
+	</tr><tr>
+		<td><span class="a"><b>A13:</b></span></td>
+		<td>Please do not send me your "thanks" if you do have nothing more to say. I like my program myself! :))) You can say whatever you like, if you ask for the registration!</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="14"></a><span class="q"><b>Q14:</b></span></td>
+		<td>The program takes a lot of memory!</td>
+	</tr><tr>
+		<td><span class="a"><b>A14:</b></span></td>
+		<td>That's Delphi! Though, most of the time the program sits in the swap file and uses just a bit of the memory. Hint: on P133/48 there are no problems and it works even faster and more productive!</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="15"></a><span class="q"><b>Q15:</b></span></td>
+		<td>I want to use the console to control WinAmp. Can I do that?</td>
+	</tr><tr>
+		<td><span class="a"><b>A15:</b></span></td>
+		<td>WinAmp as such supports hot key functionality through plug-ins. There are lots of them already and it is easier to use them instead. Though, if you want to control your WinAmp through the console in particular, please feel free to download tar_winamp plugin that allows you to do it from the command line.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="16"></a><span class="q"><b>Q16:</b></span></td>
+		<td>What are "system aliases"?</td>
+	</tr><tr>
+		<td><span class="a"><b>A16:</b></span></td>
+		<td>System aliases are one of Windows "hidden" features. A lot of applications (and actually Windows itself, that's why we call them "system") during installation automatically create subkeys in "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\" Registry key with such a structure:<br>
+Key name - this is an alias name - in most cases linked executable filename (e.g. "Winword.exe").<br>
+String values inside a key:<br>
+"(Default)" - full path to executable (e.g. "C:\PROGRA~1\Office\OFFICE11\WINWORD.EXE);<br>
+"Path" - full path to executable location folder (e.g. "C:\PROGRA~1\Office\OFFICE11\), nonabligatory one.<br>
+So in most cases you already have that predefined aliases working the same way as defined in TypeAndRun configuration ones (TypeAndRun "understand" only linked to *.exe files system aliases) and you can save your time and affords using them.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="17"></a><span class="q"><b>Q17:</b></span></td>
+		<td>Появится ли версия под linux и когда?</td>
+	</tr><tr>
+		<td><span class="a"><b>A17:</b></span></td>
+		<td>Поскольку linux в качестве десктопной машины меня не привлекает, разработка версии под linux пока не предполагается. Тем не менее, я рад буду контакту с энтузиастом, который решит заняться этим благородным делом.</td>
+	</tr><tr>
+		<td colspan="2">&nbsp;</td>
+	</tr><tr>
+		<td><a name="n"></a><span class="q"><b>Qn7:</b></span></td>
+		<td>I have not find the answer!</td>
+	</tr><tr>
+		<td><span class="a"><b>An:</b></span></td>
+		<td>If this FAQ does not have the answer for your question, please send it to me. I promise to reply!</td>
+	</tr>
+</table>
+
+</body>
+</html>

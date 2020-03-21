@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+	<title>How to create aliases</title>
+</head>
+<body style="font-family: MS Sans Serif; font-size: 10pt; text-align: justify;">
+
+<span style="font-family: Helvetica, Arial; font-size: 12pt; width: 100%; background-color: #8CB9FD; padding: 2px 2px 2px 2px;"><b>How to create aliases</b></span><br>
+
+<p><b>1) Aliases are saved into the config.ini file in as follows:</b></p>
+
+<p style="font-family:Courier New; font-size:9pt">
+
+<span style="color:#FF0000">alias</span<span style="color:#000000">|</span><span style="color:#FF0000">action</span><span style="color:#000000">[|[</span><span style="color:#007F00">parameters</span><span style="color:#000000">][|[</span><span style="color:#007F00">folder</span><span style="color:#000000">][|[</span><span style="color:#007F00">state</span><span style="color:#000000">][|[</span><span style="color:#007F00">history</span><span style="color:#000000">][|[</span><span style="color:#007F00">to the top</span><span style="color:#000000">][|[</span><span style="color:#007F00">priority</span><span style="color:#000000">][|</span><span style="color:#007F00">comment</span><span style="color:#000000">]]]]]]]</span>
+
+</p>
+
+<p><span style="color:#FF0000">alias</span>:<br>
+Name assigned to the entry with all its parameters. You will have to type it in the console window to start specified application. It is a mandatory field.</p>
+
+<p><span style="color:#FF0000">action</span>:<br>
+Any action allowed in the system. For example, it can be a full path to an application or a document, internet or e-mail address, as well as a shell command. It is also a mandatory field.</p>
+
+<p><span style="color:#007F00">parameters</span>:<br>
+Parameters automatically passed to the action. The final list of parameters will be compiled as follows: parameter_saved_in_the_config.ini_file + parameter_passed_through_the_console_window. There is no white space automatically added between the parameters to expand functionality of the program. If you need one, take care of it yourself. If you have to change the order of parameters, see how you can do it in the section 2.<br>
+"¦" (Alt+0166) symbol substitutes for "|" (pipe) in alias "Parameters:" field (you can't use "|" directly in alias configuration 'cause it's already reserved by TAR as field separator).</p>
+
+<p><span style="color:#007F00">folder</span>:<br>
+Current directory for the program. If no value is supplied, it will be substituted with the full path to the folder where the executed file is stored, when applicable.</p>
+
+<p><span style="color:#007F00">state</span>:<br>
+Initial state of the program after start:<br>
+0 - Hidden<br>
+1 - Standard (default value)<br>
+2 - Minimized<br>
+3 - Maximized<br>
+4 - Standard without focus<br>
+5 - Hidden without focus<br>
+Please note that each application may have its own settings, which may override your choice.</p>
+
+<p><span style="color:#007F00">history</span>:<br>
+How the parameters passed with the alias are saved:<br>
+0 - Same as in the general settings (default value)<br>
+1 - Always (if the alias has a parameter)<br>
+2 - Never</p>
+
+<p><span style="color:#007F00">to the top</span>:<br>
+Settings relating to position of the alias in the alias list after it is executed:<br>
+0 - Same as in the general settings (default value)<br>
+1 - Always<br>
+2 - Never</p>
+
+<p><span style="color:#007F00">priority</span>:<br>
+Priority which will be assigned to the program associated with the alias when it is started:<br>
+-1 - Low<br>
+0 - Normal (default value)<br>
+1 - High<br>
+2 - Real time<br>
+This option is ignored if the alias is associated with a document, folder or other non-executable files.</p>
+
+<p><span style="color:#007F00">comment</span>:<br>
+Small description of the alias, that for you to remember waht is alias purpose. Displays in hint while you type the alias name.</p>
+
+<p><b>2) Replacing passed parameters</b></p>
+
+When specifying the application path or parameter or start path, you may add %s as a parameter. In this case, %s will be replaced with the parameter you pass to the program from the console window. For example, you may have the following alias for Google search:<br>
+<div style="font-family:Courier New; font-size:9pt; padding: 5px 5px 5px 5px;">gg|gg|http://www.google.com/search?q=%s&hl=en</div>
+Then the "gg test" (with no quotes) typed in the console will open a browser window with the following address:<br>
+<div style="font-family:Courier New; font-size:9pt; padding: 5px 5px 5px 5px;">"http://www.google.com/search?q=test&hl=en" (with no quotes)</div></p>
+
+<p>When specifying the application path or parameter or start path, you may add several parameters: %1, %2 .. , %N . In this case, %N will be replaced with the N-count parameter you passed to the program from the console window. Space is delimeter for the parameters. For example:<br>
+<div style="font-family:Courier New; font-size:9pt; padding: 5px 5px 5px 5px;">alias|D:\Path\%1|name=%1 twoparam=%2 allparams=%s</div>
+Then the "alias 1.exe 2 3 4 5" (with no quotes) typed in the console, the<br>
+<div style="font-family:Courier New; font-size:9pt; padding: 5px 5px 5px 5px;">"D:\Path\1.exe name=1.exe twoparam=2 allparams=1.exe 2 3 4 5" (with no quotes)</div>
+will be executed.
+
+<p><b>3) Attach several commands to one alias</b></p>
+
+<p>If you want to start several applications with a single alias, set up all these applications separately with the same alias name. Then you will be able to start them all typing just that one alias. And if you want to have more complicated functionality, it would be better to write a .bat or .cmd file and assign an alias to that.</p>
+
+<p><b>4) Symbols not allowed in aliases</b></p>
+
+<p>You should not use pipe symbol ("|"), since it is used to separate different parts of an alias in the config.ini file. Neither should you use white spaces in aliases, for there will be a problem to distinguish between an alias and its parameters. I would not recommend to use aliases with slash "/" as a first symbol, since it is used in the internal program commands.</p>
+
+</body>
+</html>

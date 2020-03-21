@@ -1,0 +1,30 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=..\Russian.chm
+Contents file=d:\Doc\Delphi\TypeAndRun\Lang\Russian\Russian.hhc
+Default topic=aboutprogram.htm
+Display compile progress=Yes
+Error log file=d:\Doc\Delphi\TypeAndRun\Lang\Russian\Russian.log
+Full-text search=Yes
+Index file=d:\Doc\Delphi\TypeAndRun\Lang\Russian\Russian.hhk
+Language=0x419 Russian
+Title=TypeAndRun russian help
+
+
+[FILES]
+aboutprogram.htm
+backaddress.htm
+commandlineparams.htm
+createaliases.htm
+distrcontext.htm
+faq.htm
+historycreated.htm
+hotkeys.htm
+runaliases.htm
+samples.htm
+senks.htm
+shareware.htm
+systemperfomance.htm
+working.htm
+
+[INFOTYPES]

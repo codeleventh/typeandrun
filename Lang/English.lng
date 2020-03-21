@@ -1,0 +1,266 @@
+author = -=GaLaN=- (Evgeniy Galanstev)
+version = 4.7b6
+
+
+error = Error!
+clearhistory = &Clear history: now
+clearhistory2 = records. Warning - no undo!
+cannotusehotkey = Can't bind hotkey! Now use system tray icon...
+erroraliasname = Error! Alias name or action empty!
+allfiles = All files
+exefiles = Executable files
+wavfiles = Waveform files
+selectfile = Select file...
+selectdirectory = Please specify a directory:
+deletethisalias = Delete this alias?
+replacepath = Replace path in this alias?
+decheckcomplete = Dead aliases check finished.
+checkingalias = Checking alias:
+generationfilelist = Generating file list...
+statusloaded = Status: loaded
+statusunloaded = Status: unloaded
+plugins = Plugins
+badplugin = This isn't plugin %p %v!
+
+
+aboutprogram = About %p %v...
+visitoffsite = Visit official page of %p %v...
+mailme1 = Contact me by email #1...
+mailme2 = Contact me by email #2...
+close = Close
+
+
+settings = Settings
+settingsappearance = Appearance
+settingsconsolelook = Console look
+settingshintpopup = Hint popup
+settingsdropdownlist = Dropdown List
+settingscolors = Colors
+settingsfont = Font
+settingshotkey = HotKey
+settingseasytype = EasyType
+settingsexec = Exec
+settingshistory = History
+settingspath = Paths
+settingsregistry = Registry
+settingslanguage = Language
+settingsundo = Undo
+settingssounds = Sounds
+settingsconfig = Config
+settingseditconfig = Edit Config
+settingsplugins = Plugins
+
+ok = OK
+cancel = Cancel
+apply = Apply
+
+showconsoleonstart = &Show console window on start
+closeafterenter = &Hide console with Enter
+hideconsoletrigger = &Trigger show (Hotkey or Esc)
+systemtrayicon = Show &icon in system tray
+showballontips = Show &balloon tips in system tray (OS ME and >=NT5 only)
+putmouseintoconsole = &Place mouse cursor above console window on every console appearance
+autohideconsole = &AutoHide console after (in millisecs):
+prioriincantatem = Running priority:
+priorilow = -1 - Low
+priorinormal = 0 - Normal
+priorihigh = 1 - High
+priorirealtime = 2 - Realtime
+
+showcenterx = Show in center &X
+showcentery = Show in center &Y
+consolewidth = Console width:
+consoleheight = Console height:
+consolewidthpercent = (in percent of screen width)
+bordersize = Border size:
+showonlyborder = Show bo&rder only (OS >= NT5)
+transparent = Transparent console (OS >= NT5):
+
+showhint = Show &hint while typing alises and system aliases in console
+hintbordersize = Border size:
+hintborderonly = Show bo&rder only (OS >= NT5)
+hinttransparent = Transparent hint (OS >= NT5):
+aliashint = Run (alias):
+sysaliashint = Run (system alias):
+
+dropdownlinenum = &Number of lines in the dropdown list:
+dropdownbordersize = Border size:
+dropdownborderonly = Show bo&rder only (OS >= NT5)
+dropdowntransparent = Transparent dropdown (OS >= NT5):
+
+noetcolor = EasyType disable
+normaletcolor = EasyType enable
+linuxcolor = BASH model
+fontcolor = Text color:
+consolecolor = Console color:
+bordercolor = Border color:
+hinttextcolor = Hint text color:
+hintcolor = Hint color:
+dropdowntextcolor = Dropdown text color:
+dropdowncolor = Dropdown color:
+
+changefont = Change &font...
+fontautosize = &Autosize font to console height
+textalign = Text alignment:
+alignleft = Align &left
+aligncenter = Align &center
+alignright = Align &right
+applyenglish = A&pply English layout every hotkey push
+lockenglish = L&ock English layout in the console
+
+hotkeyalt = &Alt
+hotkeyctrl = &Ctrl
+hotkeyshift = &Shift
+hotkeywin = &Win
+
+noet = &Don't use EasyType
+standartet = &Use EasyType
+linuxt = Use &BASH model of EasyType
+etinternal = Use EasyType for &internal commands
+etalias = Use EasyType for &aliases
+etsysalias = Use EasyType for &system aliases
+etpath = Use EasyType for path b&rowser
+etplugin = Use EasyType for &plugins aliases
+ethistory = Use EasyType for &history
+addspace = Add space to a&lias name
+casesensitivity = &Case sensitivity (www <> WWW)
+applyet = &Enable EasyType mode on every console appearance
+advancedbackspace = Use advanced Bac&kSpace processing mode
+advancedspace = Use ad&vanced Space processing mode
+deleteduplicates = Dele&te duplicates in the EasyType completion list
+
+runinternal = Execute &internal commands
+runalias = Execute &aliases
+usedefaultaction = ... &with default shell action
+runsysalias = Execute &system aliases
+runwww = Execute &URL's
+runemail = Execute &E-Mail's
+runfolder = Execute &folders
+runfile = Execute fi&les
+runplugin = Execute &plugins
+runother = Execute shell &commands (all other)
+nohistory = &Don't save history to file
+
+hisfile = Sa&ve history to file:
+hisinternal = Save &internal commands
+hisinternalparam = ... &with parameters
+hisalias = Save &alias
+hisaliasparam = ... wi&th parameters
+hissysalias = Save &system alias
+hissysaliasparam = ... wit&h parameters
+hiswww = Save &URL's
+hisemail = Save &E-Mail's
+hisfolder = Save &folder's
+hisplugin = Save &plugins's
+hispluginparam = ... with paramete&rs
+hisother = Save shell commands (all &other AKA unknown)
+hiscommandline = Save strings from command &line (--exec=string)
+hismessage = Save strings from &message WM_COPYDATA to console window
+invertscroll = I&nvert history scroll
+maxhistorysize = Max history strings (0 - infinite):
+
+yourbrowser = Your internet browser:
+yourfm = Your file manager (example: explorer.exe):
+yourshell = Your command shell (example: command.com):
+enterparam = Parameter for command shell - Enter:
+shiftenterparam = Parameter for command shell - Shift+Enter:
+
+noautostart = &No autostart
+starthklm = HK&LM - for all users
+starthkcu = HK&CU - for current user
+shellintegration = &Shell integration ("Add to %p..." context menu)
+multiusers = &Use multi users config system (NT only) *
+murequirerestart = * require restart %p
+
+delectlang = Select language:
+authorlang = Author:
+versionlang = Version:
+
+useundo = &Use Undo function
+
+enablesounds = &Enable sounds
+browsesound = &Browse
+soundexecinternal = Execute internal command
+soundexecalias = Execute alias
+soundexecsysalias = Execute system alias
+soundexecurl = Execute URL
+soundexecemail = Execute E-Mail
+soundexecfolder = Execute folder
+soundexecfile = Execute file
+soundexecplugin = Execute plugin
+soundexecallother = Execute all other
+
+moveupalias = &Move executed alias to first position of config
+autosortconfig = Auto&sort config by alias name
+autoreread = Auto reread config and system aliases &every (in millisecs):
+rereadhotkey = &Reread config and system aliases every show console window
+createdabackup = Create ~Config.ini files &with removed dead aliases?
+confirmkillda = &Get confirmation before removing dead alias
+searchdadisk = Search &file on all drives but another folder
+searchdaplugin = Search &alises in connected plugins
+searchdaonstart = Check &dead aliases on every execute TypeAndRun
+searchdanow = &Check dead aliases
+backallda = Get &back all dead aliases
+
+aliasname = Alias name:
+aliasaction = Action:
+aliasparam = Parameters:
+aliaspath = Start path:
+aliasstate = State of window:
+aliasaddhistory = Add to history?
+aliasmoveup = Move executed alias to first position of config?
+aliasprioriincantatem = Priority:
+aliascomment = Comment:
+newalias = &New Alias
+deletealias = &Delete Alias
+statehide = 0 - Hide
+statenormal = 1 - Normal
+stateminimize = 2 - Minimize
+statemaximize = 3 - Maximize
+statenormalnofocus = 4 - Normal NO FOCUS
+stateminimizenofocus = 5 - Minimize NO FOCUS
+addhisdefault = 0 - Default
+addhisalways = 1 - Always
+addhisnever = 2 - Never
+moveupdefault = 0 - Default
+moveupalways = 1 - Always
+moveupnever = 2 - Never
+aliaspriorilow = -1 - Low
+aliaspriorynormal = 0 - Normal
+aliaspriorihigh = 1 - High
+aliaspriorirealtime = 2 - Realtime
+
+pluginname = Name:
+pluginversion = Version:
+plugindesc = Description:
+pluginauthor = Author:
+plugincopyright = Copyright:
+pluginsite = Homepage:
+pluginpath = Path:
+addplugin = &Add plugin...
+deleteplugin = &Remove plugin
+loadplugin = &Load plugin
+unloadplugin = Un&load plugin
+loadpluginonstart = Load plugin on %p &start
+savehistoryplugin = Save &history for this plugin
+
+
+systemtrayhint = %p %v
+consoleshow = Show console
+consolehide = Hide console
+consolecut = Cut
+consolecopy = Copy
+consolepaste = Paste
+consoleclear = Clear
+consoleselectall = Select all
+consoleundo = Undo
+consolenewalias = New alias...
+consoledeletestring = Delete string
+consoleopenfolder = Open alias folder
+consolerereadconfig = Reread configs
+consoleonoffet = On\Off EasyType
+consolesettings = Settings...
+consoleconfigeditor = Config Editor...
+consolehelp = Help
+consoleaboutprogram = About %p...
+consoleexit = Exit

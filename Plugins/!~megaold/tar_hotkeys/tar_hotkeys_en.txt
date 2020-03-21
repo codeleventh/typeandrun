@@ -1,0 +1,49 @@
+Name: Global hotkey management plugin for TypeAndrun.
+Version: 1.0
+Author: -=GaLaN=- (Evgeniy Galantsev)
+
+Description:
+Allows to create global hotkeys for running strings via TypeAndRun.
+
+How to configure:
+In the plugin's folder there's the config file "tar_hotkeys.ini". The following strings have to be added into it:
+mods|key|string
+
+WHERE:
+mods - optional modifiers: A (Alt), C (Control), S (Shift) è W (Win) - in any combination, for instance:
+cas
+w
+wca
+
+key - the key used separately or simultaneously with modifiers. Only A...Z and 0...9 combinations are allowed, plus the keys from the list:
+`
+-
+=
+\
+;
+'
+,
+.
+/
+F1..F12
+
+strings - any string. It's this string which will be sent via TypeAndRun with the help of SendMessage after pressing the hotkey.
+
+Purpose:
+
+There have been numerous wishes to add the hotkey program run feature to TypeAndRun. But it completely disagrees with the TypeAndRun's ideology, which is to free a user from many hotkeys. Yet, since such wishes increase constantly, I've written this plugin.   
+
+History:
+[+] New feature
+[*] Bug fixed
+[-] Removed feature
+
+Version 1.0 - 05 dec 2004
+[+] the 1st version of the plugin
+
+=======================================
+----------------------------------¬
+translated from Russian to English
+by Paul Kiss, pk280181@yandex.ru
+
+

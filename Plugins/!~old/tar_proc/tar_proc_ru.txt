@@ -1,0 +1,6 @@
+Название: Плагин выводит список процессов для TypeAndRun.
+Версия: 0.0.0.1 prealfa
+Konstantin Milez Frolov
+Copyright ©2003 Konstantin Frolov
+http://lavka.lib.ru/bujold/
+

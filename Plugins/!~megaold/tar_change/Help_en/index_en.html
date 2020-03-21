@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>About tar_change</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+ <center>
+ <h1>Wallpaper and other rotator</h1>
+ <h2>Version 1.0</h2>
+ </center>
+ <h2>Author: Python &lt;smisoft@rambler.ru&gt; SmiSoft (SA)</h2>
+ <h3>What is this:</h3>
+ Plugin can be used for replacing files with ones from the list with a given order.
+ <br>That means, you can set only one wallpaper, sound files and so on and then replace them with another one only with one command by given order.
+ <br>Plugin can rotate files only manually, for automatization you should use my tar_timer plugin.
+ <h3>Description:</h3>
+ Replaces given files with one from given list.
+ <h3>Aliases:</h3>
+ <ul>
+  <li>~change
+   <ul>
+    <li><b>Syntax:</b>
+     <br><i>~Change [ids.../*] [+/-/+n/-n/n]</i>
+    <li><b>Description:</b>
+     <br>Rotate files with given Id or calls editor.
+    <li><b>Parameters:</b>
+     <ul>
+      <li><i>Ids...</i> - identifier list, divided by spaces or star (*) symbol, defines all possibly identifiers. If you define not existing identifier, it won't be processed.
+      <li><i>+/-</i> - change file with given id to next/previous from the list. If you choose chaotic selection, next random file will be selected.
+      <li><i>+n/-n</i> - change file with given Id to next/previous n from the list. File list cycled automatically. Result not depends on selection mode (chaotic or ordered)
+      <li><i>n</i> - set file with given id to file number n from the list. File list cycled. First file has number 1.
+     </ul>
+     If no parameter defined, editor called.
+     Field Sequence generator means, how next file will be selected: ordered or chaotic.
+     Field Target files shows, who will be replaced. First field mean identifier (will be used in change command from console). Another - target file name
+     <br>Button ... - change file name.
+     <br>Button + - add new file.
+     <br>In list you can see all available identifiers. Also, you can use this hotkey while list active:
+     <br><i>Ctrl-Up, Ctrl-Down, Ctrl-PgUp, Ctrl-PageDown</i> - move file up/down/to the beginning/to the end of the list.
+     <br><i>Insert, Delete</i> - insert new file, or delete selected.
+   </ul>
+ </ul>
+ <center><img src="change_en.gif"></center>
+ <h3>Setup:</h3>
+ Put files tar_change.dll, tar_change.ini and tar_change.chm to folder plugins of TaR, then simply register plugin.
+ <h3>How to use:</h3>
+ I consider a case, when you try to use my plugin for automatic replacement of desktop's wallpaper.
+ <br>Create any file .bmp and place it as desktop's wallpaper. If your wallpaper collection has identical resolution (equal to resolution of your screen), you should do nothing, otherwise put the mode "Stretch". Select wallpaper file on the panel of target files. Let its identifier Wall. Now select from right column all those files, which you want to substitute. Now on the command ~change wall + you will proceed to the next wallpaper. That command may be added to timer or sheduler.
+ <h3>Features:</h3>
+ Tested only on Windows XP.
+ <br><b><font size=+1 color=blue>History:</font></b>
+ <br><font color=green>[+]</font>&nbsp;New feature
+ <br><font color=blue>[*]</font>&nbsp;Bug fixed
+ <br><font color=red>[-]</font>&nbsp;Feature removed
+ 
+ <p><font size=+1 color=blue>Version 1.0 - 24.06.05</font>
+ <br><font color=green>[+]</font>&nbsp;First version
+</body>
+</html>

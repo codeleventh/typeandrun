@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+<head>
+<title>Alias description ~id3copy</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+</head>
+<body>
+ <center><a href="index_en.html">Назад</a></center>
+ <h3>~Id3Copy</h3>
+ <h4>Description:</h4>
+ Intended for operation with tags ID3 of the popular format MP3. With its help it is possible to copy or process tags. 
+ <br>Today, only ID3v1 tags supported, so the long comments, genres and extended information for a song are not
+ available.
+ <center><img width=525 height=297 src="id3_en.gif"></center>
+ <ol>
+  <li>Input file. On the right - button for choice. In a field of input files it is possible to use masks (same,
+  as by regular search in an operating system. For example, *.mp3. 
+  <li>Output file. If the name of an output file coincides with a name of an input file, the tag will simply be
+  updated. Also it is possible to use masks: 
+  <ul>
+   <li><i>*</i> или <i>*.*</i> - is substituted on a real name of the processing file with the extension
+   <li><i>*.ext</i> - is substituted on a filename with the extension <i>.ext</i>
+   <li><i>name.*</i> - is substituted on the file <i>name</i> with the former extension
+   <li><i>{filename}</i> - is substituted on a complete filename
+   <li><i>{filename i1}</i> - is substituted on a piece of a filename, since i1 of a position
+   <li><i>{filename i1 i2}</i> - is substituted on a piece of a filename with i1 of a position of length i2
+   <li><i>{name}</i>, <i>{name i1}</i>, <i>{name i1 i2}</i> - same, but only for a filename (without the extension)
+   <li><i>{ext}</i>, <i>{ext i1}</i>, <i>{ext i1 i2}</i> - same, but for the extension (with a point)
+  </ul>
+  <li>Depth of scanning. The most left position - without scanning subdirectories, most right - deepest scan mode.
+  Select, that it is necessary. 
+  <li>Whether the tag in an output file is necessary. If is removed, the tag in an output file is erased. In this
+  case it would be logical to specify initial and target file identical (see item 2) 
+  <li>Contents of the generalized tag. Here in the special form is written information that finally will be written
+  in ID3 a tag in an output file. In fields the following constants are admitted(allowed,valid): 
+  <ul>
+   <li><i>{Filename}</i> - filename
+   <li><i>{Name}</i> - filename (without paths and extensions)
+   <li><i>{Ext}</i> - file extension (with an anticipating point)
+   <li><i>{Title}</i> - header, song name, title
+   <li><i>{Artist}</i> - actor
+   <li><i>{Album}</i> - album
+   <li><i>{Comment}</i> - Comment
+   <li><i>{Year}</i> - year
+   <li><i>{Genre}</i> - genre
+  </ul>
+  After a constant through a blank it is possible to write two integers in the decimal notation. Then the piece of
+  a constant in the indicated interval (first - beginning, second - length of a piece) will be inserted.
+  <br> Example: <i>{Filename 1 10}</i> - cut off from a filename the first 10 characters
+  <br>Or it is possible to specify only first character - then the rest up to the end of string(line) will be copied:
+  <br> <i>{FileName 5}</i> - take from the fifth character of a filename up to the end.
+  <li>Presets. That is it is possible beforehand to create variants of alterations of tags, and then only to select
+  necessary. By default at the configuration file is present пресет To copy - carry to an output file of a tag entry
+  without changes. Buttons: 
+  <ul>
+   <li><i>+</i> - add preset. The program will request you his(its) name.
+   <li><i>-</i> - delete selected preset.
+   <li><i>*</i> - update selected preset. It is necessary to remember, that at first it is necessary to select
+   necessary preset, then update tags and only then update it. The program will request preset's name (if it is
+   necessary, it can be changed). 
+  </ul>
+  <li>Start of conversion. Current file will be displayed in status line under buttons. Also start of conversion
+  can be done by pressing the Enter button in fields of editing. 
+  <li>Exit with saving of parameters. Also to close program you can simply press Esc.
+ </ol>
+ <h4>Feature:</h4>
+ <ul>
+  <li>The empty genre has the code 255! It is a feature of the format MP3.
+ </ul>
+</body>
+</html>

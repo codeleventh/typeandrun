@@ -1,0 +1,19 @@
+[OPTIONS]
+Compatibility=1.1 or later
+Compiled file=tar_misc_en.chm
+Default topic=index_en.html
+Display compile progress=No
+Language=0x419 Russian
+
+
+[FILES]
+book2_en.html
+book_en.html
+Example_en.htm
+id3_en.html
+index_en.html
+list_en.html
+txthtm_en.html
+
+[INFOTYPES]
+
